@@ -1,0 +1,155 @@
+.footer{
+    margin-top: 7rem;
+    color: #062348;
+    background: #0eebc3;
+    text-decoration: none;
+    padding: 2rem 3rem 2rem 3rem;
+    display: flex;
+}
+.logo-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+}
+.logo img{
+    height:10rem;
+    width: 10rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.icons{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+.icons a{
+    color: #062348;
+}
+.icons a :hover{
+    color: white;
+}
+.stay-tuned{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.details p{
+    margin-bottom: 0.8rem;
+}
+.details{
+    margin-bottom: 2rem;
+}
+.details-icons{
+    display: flex;
+
+}
+.spacing{
+    margin-right: 1rem;
+}
+.bold{
+    margin-right: 0.5rem;
+}
+.policies{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.policies a{
+    color: rgb(4, 4, 100);
+    text-decoration: none;
+}
+.policies a:hover{
+    color: white;
+}
+
+@media (max-width:500px) {
+    .footer{
+        margin-top: 7rem;
+        color: #062348;
+        background: #0eebc3;
+        text-decoration: none;
+        /* padding: 2rem 3rem 2rem 3rem; */
+        display: flex;
+        font-size: 0.75rem;
+    
+    }
+    .logo-icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .logo{
+        display: flex;
+        height: 10rem;
+        width: 10rem;
+        display: none;
+    }
+     
+    .icons{
+        display: flex;
+        gap: 5px;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .icons a{
+        color: #062348;
+    }
+    .icons a :hover{
+        color: white;
+    }
+    .stay-tuned{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .details p{
+        margin-bottom: 0.4rem;
+        font-size: .75rem;
+    }
+    .details{
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .details-icons{
+        display: flex;
+    
+    }
+    .spacing{
+        margin-right: 1rem;
+    }
+    .bold{
+        margin-right: 0.5rem;
+        margin-left: 0px;
+    }
+    .policies{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        font-size: 0.75rem;
+    }
+    .policies a{
+        color: rgb(4, 4, 100);
+        text-decoration: none;
+        margin-right: 0.75rem;
+    }
+    .policies a:hover{
+        color: white;
+    }
+    .policies p{
+        font-size: 2rem;
+        /* height: 2rem; */
+        display: none;
+    }
+    
+}

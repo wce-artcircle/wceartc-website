@@ -1,0 +1,116 @@
+#teams{
+    padding-top: 2rem;
+}
+.teams{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.heading{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 200;
+}
+.cards-style{
+    cursor: pointer;
+    border-radius: 20px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--color-primary);
+}
+.card-content{
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+.card-footer{
+    width: 100%;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(86, 81, 81,0.5);
+    min-height: 90px;
+    align-items: center;
+}
+.card-footer h6{
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+.card-content:hover{
+    .heading{
+        display: none;
+    }
+}
+.card-footer p{
+    color: white;
+    text-align: center;
+    padding-top: 1.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* .Slide img{
+    width: 40rem;
+    height: 25rem;
+    border-radius: 5% ;
+    box-shadow: 2px 5px 15px #21E6C1;
+    margin-bottom: 20px;
+    
+    
+}
+
+.slideContent{
+   
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bolder;
+   
+    
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (max-width:500px) {
+    .Slide img{
+        width: 18rem;
+        height: 15rem;
+        border-radius: 5% ;
+        box-shadow: 2px 5px 15px #21E6C1;
+        margin-bottom: 20px;
+        
+        
+    }
+    
+    .slideContent{
+       
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+        flex-direction: column;
+        font-size: large;
+        font-weight: bolder;
+       
+        
+    }
+    
+    h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 40px;
+    }
+} */

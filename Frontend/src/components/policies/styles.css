@@ -1,0 +1,45 @@
+body{
+    display:inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #071E3D;
+    color:white;
+}
+a{
+    color:  rgb(4, 4, 100);
+}
+
+a:hover{
+    color:white;
+}
+
+#privacy-policy,#terms-and-conditions,#cancellation-and-refund,#contact{
+    margin:1em;
+}
+.heading{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.subheading{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;   
+    margin-left: 3rem;
+}
+.points{
+    margin-left: 6rem;
+    margin-bottom: 0.5em;
+}
+#contact p{
+    margin-left: 3rem;
+    margin-bottom: 0.5em;
+}
+#contact   a{
+    color: rgb(98, 171, 236);
+    cursor: pointer;
+}
+#contact   a:hover{
+    text-decoration: underline;
+}
+
