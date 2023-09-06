@@ -67,6 +67,10 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 3rem;
+    object-fit: fill;
+    height: 20rem;
+    width: 20rem;
+    margin-right: 4rem;
 }
 .about-img img{
     padding: 0;

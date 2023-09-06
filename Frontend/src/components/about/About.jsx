@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ABTIMAGE from '../../assets/aboutusimg.png'
+import ABTIMAGE from '../../assets/about_img.jpg'
 
 const About = () => {
   return (
