@@ -4,7 +4,7 @@ require('dotenv').config();
  const sendEmail = async (name, email, otp) => {
     try{
         let transporter=nodemailer.createTransport({
-            service:'gmail',
+            service:'outlook',
             auth:{
                 user:process.env.EMAIL,
                 pass: process.env.PASS,
@@ -21,7 +21,9 @@ require('dotenv').config();
             <br>
             <p>Your registration otp is <b>${otp}</b></p>
             <br>
-            <p>The event will be held on <b>9 September 2023</b> at <b>WCE Sangli</b>.</p>
+            <p>Do not share this OTP with anyone. This is for your entry at the GIM.</p>
+            <br>
+            <p>The event will be held on <b>16 September 2023</b> at <b>WCE Sangli</b>.</p>
             <br>
             <p>Thank you for registering for the event. We are looking forward to seeing you there.Get ready for an adventure like no other!🤩</p>
             <br>
