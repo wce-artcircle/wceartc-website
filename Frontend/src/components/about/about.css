@@ -146,7 +146,7 @@
         } */ 
     
     }
-    @keyframes clippath {
+    /* @keyframes clippath {
         0%,
         100% {
             clip-path: inset(0 0 95% 0);
@@ -161,7 +161,7 @@
         75% {
             clip-path: inset(0 0 0 95%);
         }
-    }
+    } */
     .about-img{
         display: flex;
         display: none;
@@ -343,7 +343,7 @@
         }
     
     }
-    @keyframes clippath {
+    /* @keyframes clippath {
         0%,
         100% {
             clip-path: inset(0 0 95% 0);
@@ -358,7 +358,7 @@
         75% {
             clip-path: inset(0 0 0 95%);
         }
-    }
+    } */
     .about h2{
         font-size: 2rem;
         margin-bottom: 1rem;
