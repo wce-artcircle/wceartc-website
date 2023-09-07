@@ -5,6 +5,7 @@
     text-decoration: none;
     padding: 2rem 3rem 2rem 3rem;
     display: flex;
+    margin-right: 0;
 }
 .logo-icons{
     display: flex;
@@ -68,7 +69,13 @@
     color: white;
 }
 
-@media (max-width:500px) {
+@media (min-width:350px) and (max-width:500px) {
+    #footer{
+        margin-right: 0;
+    }
+    footer{
+        margin-right: 0;
+    }
     .footer{
         margin-top: 7rem;
         color: #062348;
@@ -77,13 +84,23 @@
         /* padding: 2rem 3rem 2rem 3rem; */
         display: flex;
         font-size: 0.75rem;
-    
+        padding: 0.5rem;
+        /* width:90vw; */
+        padding-left: 2rem;
+        margin-right: 0;
     }
     .logo-icons{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
+        width: 90vw;
+    }
+    .address-policies{
+        width:85vw;
+    }
+    .copy-rights>p{
+        width: fit-content;
+        text-align: center;
     }
     .logo{
         display: flex;
@@ -91,7 +108,9 @@
         width: 10rem;
         display: none;
     }
-     
+    .media-container{
+        width:90vw;
+    }
     .icons{
         display: flex;
         gap: 5px;
@@ -114,7 +133,7 @@
     }
     .details p{
         margin-bottom: 0.4rem;
-        font-size: .75rem;
+        font-size: 0.75rem;
     }
     .details{
         margin-bottom: 1rem;
@@ -137,16 +156,18 @@
         justify-content: space-around;
         width: 100%;
         font-size: 0.75rem;
+        width: 90vw;
     }
-    .policies a{
+    .policies>a{
         color: rgb(4, 4, 100);
         text-decoration: none;
-        margin-right: 0.75rem;
+        font-size: 12px;
+        /* margin-right: 0.1rem; */
     }
-    .policies a:hover{
+    .policie> a:hover{
         color: white;
     }
-    .policies p{
+    .policies>p{
         font-size: 2rem;
         /* height: 2rem; */
         display: none;

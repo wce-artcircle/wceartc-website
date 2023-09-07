@@ -5,7 +5,7 @@ const CancelandRefund = () => {
   return (
     <div>
         <main id="cancellation-and-refund">
-        <h1 className='heading'>Cancellation & Refund Policy</h1>
+        <h1 className='heading1'>Cancellation & Refund Policy</h1>
         <h2 className='subheading'>At Art Circle, we value your privacy and handle your personal information with care:</h2>
         <ol className='points'>
             <li>

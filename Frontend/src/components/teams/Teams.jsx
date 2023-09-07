@@ -9,7 +9,7 @@ import {
 import * as ReactDOM from 'react-dom'
 import Slideshow from './Slideshow'
 import './teams.css'
-// import DANCE from '../../assets/dance.jpg'
+import DANCE from '../../assets/dance.jpg'
 import MUSIC from '../../assets/music_t.jpeg'
 import PHOTO from '../../assets/photo_team.jpg'
 import DRAMA from '../../assets/drama_t.jpg'
@@ -103,7 +103,7 @@ const Teams = () => {
               >
                 <div className='card-content'>
                   <div className='card-footer'>
-                    <h6 className='heading'>{card[index]}</h6>
+                    <h6 className='heading2'>{card[index]}</h6>
                     {index === expandIndex && <p>{cardDescription[index]}</p>}
                   </div>
                 </div>

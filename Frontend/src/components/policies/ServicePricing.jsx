@@ -5,7 +5,7 @@ const ServicePricing = () => {
   return (
     <div>
         <main id="service-pricing">
-        <h1 className='heading'>Service Pricing</h1>
+        <h1 className='heading1'>Service Pricing</h1>
         <h4 className='subheading'>Art Circle offers a range of services and event tickets according to event at competitive prices. Please refer to our website or contact us for detailed pricing information.
     </h4>
     </main>

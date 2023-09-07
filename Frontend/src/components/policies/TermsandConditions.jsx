@@ -4,7 +4,7 @@ import './styles.css'
 const TermsandConditions = () => {
   return (
     <div><main id="terms-and-conditions">
-    <h1 className='heading'>Terms & Conditions</h1>
+    <h1 className='heading1'>Terms & Conditions</h1>
     <h6 className='subheading'>Welcome to WCE Art Circle, a cultural club dedicated to promoting art and creativity. By participating in our events, you agree to the following terms and conditions:</h6>
     <ol className='points'>
         <li>Respectful Conduct: Treat fellow participants, artists, and staff with respect and courtesy.</li>
