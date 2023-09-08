@@ -22,9 +22,10 @@ a:hover{
     margin-bottom: 0.5em;
 }
 .subheading{
+    display: flex;
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 0.5em;   
+    margin-bottom: 0.5em; 
     margin-left: 3rem;
 }
 .points{
