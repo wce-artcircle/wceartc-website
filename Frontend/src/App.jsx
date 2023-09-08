@@ -6,20 +6,18 @@ import TermsandConditions from './components/policies/TermsandConditions';
 import ServicePricing from './components/policies/ServicePricing';
 import PrivacyPolicy from './components/policies/Privacypolicy';
 import CancellationandRefundPolicy from './components/policies/CancelandRefund';
-// require('dotenv').config();
-
+ 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element = {<Main/>}/>
-          <Route exact path='/adminverification=jahfdhgcv' element = {<Admin/>}/>
+          <Route exact path='/adminverification' element={<Admin />} />
           <Route exact path='/terms-and-conditions' element = {<TermsandConditions/>}/>
           <Route exact path='/service-pricing' element = {<ServicePricing/>}/>
           <Route exact path='/privacy-policy' element = {<PrivacyPolicy/>}/>
           <Route exact path='/cancellation-and-refund-policy' element = {<CancellationandRefundPolicy/>}/>
-
         </Routes>
       </BrowserRouter>
     </>
