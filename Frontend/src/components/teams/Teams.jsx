@@ -38,7 +38,7 @@ const Teams = () => {
     'Content Team',
     'Art and Deco Team',
   ]
-  const images = [DRAMA, MUSIC, PHOTO, DRAMA, CONTENT, ART]
+  const images = [DANCE, MUSIC, PHOTO, DRAMA, CONTENT, ART]
   const [expandIndex, setExpandIndex] = useState(null)
 
   const handleCardClick = (index) => {
@@ -53,7 +53,7 @@ const Teams = () => {
       width: '200px',
     },
   }
-  const cardImages = [DRAMA, DRAMA, MUSIC, PHOTO, CONTENT, ART]
+  const cardImages = [DANCE, DRAMA, MUSIC, PHOTO, CONTENT, ART]
   const card = [
     'Dance Team',
     'Drama Team',
