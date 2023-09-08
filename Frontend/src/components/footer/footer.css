@@ -70,24 +70,23 @@
 }
 
 @media (min-width:350px) and (max-width:500px) {
-    #footer{
+    /* #footer{
         margin-right: 0;
     }
     footer{
         margin-right: 0;
-    }
+    } */
     .footer{
         margin-top: 7rem;
         color: #062348;
         background: #0eebc3;
         text-decoration: none;
-        /* padding: 2rem 3rem 2rem 3rem; */
         display: flex;
         font-size: 0.75rem;
         padding: 0.5rem;
-        /* width:90vw; */
         padding-left: 2rem;
         margin-right: 0;
+        width:100%;
     }
     .logo-icons{
         display: flex;
