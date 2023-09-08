@@ -8,7 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
-import logo from '../../assets/art circle logo orgl white (1).png'
+import logo from '../../assets/favi.png'
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2'
 import axios from 'axios'
-import logo from '../../assets/art circle logo orgl white (1).png'
+import logo from '../../assets/favi.png'
 import * as API from '../../API/registerAPI'
 import './events.css'
 

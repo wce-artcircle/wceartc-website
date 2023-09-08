@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './navbar.css'
-import IMG from '../../assets/art circle logo orgl white (1).png'
+import IMG from '../../assets/favi.png'
 
 const Navbar = () => {
   const[activeNav,SetActiveNav]=useState('#')
