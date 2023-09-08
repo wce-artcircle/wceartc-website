@@ -106,9 +106,6 @@
     .about{
         width: 95%;
         height: 48rem;
-        
-        /* margin: rem; */
-        /* overflow: scroll; */
         background-image: linear-gradient(to left, #062348, #278EA5 );
         align-items: center;
         /* border-radius: 280px 20px 280px 20px; */
@@ -120,48 +117,11 @@
         padding-left: 40px;
         padding-top: 80px;
         border: 2px solid #21E6C1;
-        /* &:hover {
-            filter: contrast(1.1);
-        }
-        
-        &:active {
-            filter: contrast(0.9);
-        }
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: 2px solid #21E6C1;
-            transition: all 1s;
-            animation: clippath 10s infinite linear;
-            /* border-radius: 280px 20px 280px 20px; */
-        /* }
-        
-        &::after {
-            animation: clippath 10s infinite -5s linear;
-        } */ 
+        margin-top: 1rem;
+
     
     }
-    /* @keyframes clippath {
-        0%,
-        100% {
-            clip-path: inset(0 0 95% 0);
-        }
-        
-        25% {
-            clip-path: inset(0 95% 0 0);
-        }
-        50% {
-            clip-path: inset(95% 0 0 0);
-        }
-        75% {
-            clip-path: inset(0 0 0 95%);
-        }
-    } */
+   
     .about-img{
         display: flex;
         display: none;
