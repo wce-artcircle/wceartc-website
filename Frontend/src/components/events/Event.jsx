@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2'
 import axios from 'axios'
-import logo from '../../assets/favi.png'
 import * as API from '../../API/registerAPI'
 import './events.css'
+import gimQR from '../../assets/gimQR.jpeg'
 
 const Event = ({ index, idx, Name, date, description, icon }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,6 +27,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   const [prn, setPrn] = useState()
   const [phone, setPhone] = useState()
   const [email, setEmail] = useState()
+  const [transactionId, setTransactionId] = useState()
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -40,73 +41,38 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
   }
+  const handletransactionIdChange = (e) => {
+    setTransactionId(e.target.value)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(name, prn, phone, email)
-    if (!name || !prn || !phone || !email) {
+    if (!name || !prn || !phone || !email || !transactionId) {
       Swal.fire('Please fill all the fields')
     } else if (phone.length !== 10) {
       Swal.fire('Please enter a valid phone number')
       return
     }
-    else if(name && prn && phone && email){
-    const {
-      data: { key },
-    } = await axios.get('https://artc-website-production.up.railway.app/payment/getKey')
-    const {
-      data: { order },
-    } = await axios.post('https://artc-website-production.up.railway.app/payment/checkout')
-    const data1 = { name, prn, phone, email }
-    console.log(data1)
-    const options = {
-      key: key, // Enter the Key ID generated from the Dashboard
-      amount: order.amount.toString(),
-      currency: 'INR',
-      name: 'Art Circle',
-      description: 'Test Transaction',
-      image: logo,
-      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: async function (response) {
-        const data = {
-          orderCreationId: order.id,
-          razorpay_payment_id: response.razorpay_payment_id,
-          razorpay_order_id: response.razorpay_order_id,
-          razorpay_signature: response.razorpay_signature,
-          name: name,
-          prn: prn,
-          phone: phone,
-          email: email,
-        }
-        const result = await axios.post(
-          'https://artc-website-production.up.railway.app/payment/paymentverification',
-          data
-        )
-        console.log(result)
-        if (result.data.success === true) {
-          const res = API.createNewStudent(data1)
-          Swal.fire('Payment Successful')
-        } else {
-          Swal.fire('Payment Failed')
-        }
-      },
-      prefill: {
+    else if(name && prn && phone && email && transactionId){ 
+      const data = {
         name: name,
+        prn: prn,
+        phone: phone,
         email: email,
-        contact: phone,
-      },
-      notes: {
-        address: 'Art Circle',
-      },
-      theme: {
-        color: '#3399cc',
-      },
+        event: Name,
+        transactionId: transactionId,
+      }
+      console.log(data)
+      const res = await API.createNewStudent(data)
+      console.log(res)
+      if (res.status === 200) {
+        Swal.fire('Registered Successfully')
+        closeModal()
+      } else {
+        Swal.fire('Something went wrong')
+      }
     }
-
-    // console.log(name,prn,phone,email);
-    const razor = new window.Razorpay(options)
-    razor.open()
-  }
   }
 
   return (
@@ -140,6 +106,9 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             </span>
             <div className='event-form'>
               <h1>{Name}</h1>
+              <div className='QR'>
+                <img src={gimQR} alt='' />
+              </div>
               <form>
                 <input
                   type='text'
@@ -165,6 +134,12 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
                   placeholder='Enter your Email Id'
                   onChange={handleEmailChange}
                 />
+                <input
+                  type='text'
+                  id='transactionId'
+                  placeholder='Enter your Transaction Id'
+                  onChange={handletransactionIdChange}
+                />
                 <button className='btn' type='submit' onClick={handleSubmit}>
                   Submit
                 </button>
@@ -181,7 +156,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
               &times;
             </span>
             <div className='event-descp'>
-              <div className='event-image1'>
+              <div className='event-image'>
                 <img src={icon} alt='' />
               </div>
               <div className='event-info'>

@@ -5,7 +5,7 @@ const OTP=require('../models/otp_collection');
 const createNewStudent = async (req, res) => {
     console.log("hello");
     try {
-        const { name, prn,phone, email } = req.body;
+        const { name, prn,phone, email,transactionId } = req.body;
         let otp;
         while (true) {
             otp = Math.floor(1000 + Math.random() * 9000);
@@ -14,7 +14,7 @@ const createNewStudent = async (req, res) => {
                 break;
             }
         }
-        const task = await Task.create({ name, prn,phone, email,otp});
+        const task = await Task.create({ name, prn,phone, email,otp,transactionId});
         await sendEmail(name, email, otp);
         res.status(201).json({ task });
     } catch (err) {

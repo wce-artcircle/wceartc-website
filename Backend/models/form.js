@@ -30,7 +30,12 @@ const studentSchema =new mongoose.Schema({
         type:Boolean,
         default:false,
         required:true
-    }
+    },
+    transactionId:{
+        type:String,
+        required:true,
+        trim:true
+    },
 });
 
 module.exports=mongoose.model('Student',studentSchema);
