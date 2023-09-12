@@ -14,6 +14,10 @@ const createNewStudent = async (req, res) => {
                 break;
             }
         }
+        const duplicateId = await OTP.findOne({ transactionId });
+        if (duplicateId) {
+            return res.status(400).json({ msg: 'Duplicate Transaction ID' });
+        }
         const task = await Task.create({ name, prn,phone, email,otp,transactionId});
         await sendEmail(name, email, otp);
         res.status(201).json({ task });
