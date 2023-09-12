@@ -47,7 +47,6 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(name, prn, phone, email)
     if (!name || !prn || !phone || !email || !transactionId) {
       Swal.fire('Please fill all the fields')
     } else if (phone.length !== 10) {
@@ -63,13 +62,12 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
         event: Name,
         transactionId: transactionId,
       }
-      console.log(data)
-      const res = await API.createNewStudent(data)
-      console.log(res)
-      if (res.status === 200) {
+      try{
+        const res = await API.createNewStudent(data)
+        console.log(res)
         Swal.fire('Registered Successfully')
         closeModal()
-      } else {
+      }catch(err){
         Swal.fire('Something went wrong')
       }
     }
