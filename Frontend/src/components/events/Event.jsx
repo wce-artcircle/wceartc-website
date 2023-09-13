@@ -68,7 +68,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
         Swal.fire('Registered Successfully')
         closeModal()
       }catch(err){
-        Swal.fire('STRansactin Id already used')
+        Swal.fire('Transaction Id already used')
       }
     }
   }
