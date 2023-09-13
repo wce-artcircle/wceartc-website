@@ -68,17 +68,25 @@ const Admin = () => {
         <table>
           <thead>
             <tr>
+              <th>Phone Number</th>
               <th>Name</th>
+              <th>Transaction Id</th>
               <th>PRN</th>
+              
+              
               <th>OTP</th>
               <th>Scanned</th>
+              
             </tr>
           </thead>
           <tbody>
             {filteredItems.map((user, index) => (
               <tr key={index}>
+                <td>{user.phone}</td>
                 <td>{user.name}</td>
+                <td>{user.transactionId}</td>
                 <td>{user.prn}</td>
+                
                 <td>{user.otp}</td>
                 <td>
                   <input
