@@ -49,7 +49,6 @@ const Admin = () => {
         }
         setuserDetails([...userDetails])
         const updateCheck = await API.updateStudent(index, e);
-      // Handle update success or any other actions if needed
     } catch (error) {
       console.error('Error updating checkbox:', error);
     }
