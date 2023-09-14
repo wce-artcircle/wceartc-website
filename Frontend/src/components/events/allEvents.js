@@ -1,4 +1,4 @@
-import pic from '../../assets/2023.png'
+import pic from '../../assets/kalarambha2023.jpeg'
 import Yuvarangimg from '../../assets/yuvarang-23.jpeg'
 import Photocontest from '../../assets/photography-contest.png'
 import farewell from '../../assets/farewell.png'
