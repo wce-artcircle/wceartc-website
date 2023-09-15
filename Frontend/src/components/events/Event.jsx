@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import * as API from '../../API/registerAPI'
 import './events.css'
-import gimQR from '../../assets/gimQR1.jpeg'
+import gimQR from '../../assets/100qr.jpeg'
 
 const Event = ({ index, idx, Name, date, description, icon }) => {
   const [isOpen, setIsOpen] = useState(false)
