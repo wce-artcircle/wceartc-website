@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import * as API from '../../API/registerAPI'
 import './events.css'
-import gimQR from '../../assets/100qr.jpeg'
+import gimQR from '../../assets/favi.png'
 
 const Event = ({ index, idx, Name, date, description, icon }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,7 +27,6 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   const [prn, setPrn] = useState()
   const [phone, setPhone] = useState()
   const [email, setEmail] = useState()
-  const [transactionId, setTransactionId] = useState()
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -41,36 +40,68 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
   }
-  const handletransactionIdChange = (e) => {
-    setTransactionId(e.target.value)
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!name || !prn || !phone || !email || !transactionId) {
+    if (!name || !prn || !phone || !email) {
       Swal.fire('Please fill all the fields')
     } else if (phone.length !== 10) {
       Swal.fire('Please enter a valid phone number')
       return
     }
-    else if(name && prn && phone && email && transactionId){ 
-      const data = {
-        name: name,
-        prn: prn,
-        phone: phone,
-        email: email,
-        event: Name,
-        transactionId: transactionId,
+    // const key= await axios.get("http://localhost:5000/payment/getKey")
+    const {data:{order}} = await axios.post("http://localhost:5000/payment/checkout");
+    // const successful = await axios.get("http://localhost:5000/payment/paymentverification")
+    // console.log(data1);
+    const options = {
+      "key":"rzp_test_8N5cWng2se0xIQ", // Enter the Key ID generated from the Dashboard
+      "amount": "7000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "currency": "INR",
+      "name": "WCE ART CIRCLE",
+      "description": "GIM 2023",
+      "image": gimQR,
+      "order_id": order.id, 
+      "handler": async function (response) {
+        if (response.razorpay_payment_id) {
+          const data1 = {
+            name: name,
+            prn: prn,
+            phone: phone,
+            email: email,
+          };
+          // Make the API call to create a new student here
+          try {
+            const res = await API.createNewStudent(data1);
+            console.log(res);
+            if (res.status === 200) {
+              Swal.fire('Payment Successful');
+              closeModal();
+            } else {
+              Swal.fire('Payment Failed');
+            }
+          } catch (error) {
+            console.error('API Error:', error);
+            Swal.fire('Payment Failed');
+          }
+        } else {
+          Swal.fire('Payment Failed');
+        }
+      },
+      
+      "prefill": {
+          "name": name,
+          "email": email,
+          "contact": phone
+      },
+      "notes": {
+          "address": "Razorpay Corporate Office"
+      },
+      "theme": {
+          "color": "#21E6C1"
       }
-      try{
-        const res = await API.createNewStudent(data)
-        console.log(res)
-        Swal.fire('Registered Successfully')
-        closeModal()
-      }catch(err){
-        Swal.fire('Transaction Id already used')
-      }
-    }
+    };
+    var razor = new window.Razorpay(options);
+    razor.open();
   }
 
   return (
@@ -86,12 +117,12 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             <button className='btn' onClick={() => setDescp(true)}>
               Read More
             </button>
-            {/* <button
+            <button
               className={`${idx === 1 ? '' : 'hidden'} btn`}
               onClick={openModal}
             >
               Register
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
@@ -104,9 +135,6 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             </span>
             <div className='event-form'>
               <h1>{Name}</h1>
-              <div className='QR'>
-                <img src={gimQR} alt='' />
-              </div>
               <form>
                 <input
                   type='text'
@@ -132,14 +160,8 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
                   placeholder='Enter your Email Id'
                   onChange={handleEmailChange}
                 />
-                <input
-                  type='text'
-                  id='transactionId'
-                  placeholder='Enter your Transaction Id'
-                  onChange={handletransactionIdChange}
-                />
                 <button className='btn' type='submit' onClick={handleSubmit}>
-                  Submit
+                  Proceed to Pay
                 </button>
               </form>
             </div>
@@ -169,4 +191,4 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   )
 }
 
-export default Event
+export default Event;
