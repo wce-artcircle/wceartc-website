@@ -48,7 +48,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
     } else if (phone.length !== 10) {
       Swal.fire('Please enter a valid phone number')
     }
-    const {data:{order}} = await axios.post("http://https://artc-website-production.up.railway.app/payment/checkout");
+    const {data:{order}} = await axios.post("https://artc-website-production.up.railway.app/payment/checkout");
     
     const options = {
       "key":"rzp_test_8N5cWng2se0xIQ", // Enter the Key ID generated from the Dashboard
