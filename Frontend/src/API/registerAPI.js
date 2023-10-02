@@ -9,11 +9,11 @@ export const verifyOTP = async(data) => {
     return res;
 }
 export const getAllRegisteredStudents = async() => {
-    const res=await axios.get("http://localhost:5000/register/getAllRegisteredStudents");
+    const res=await axios.get("https://artc-website-production.up.railway.app/register/RegisteredStudents");
     return res;
 }
 
 export const updateStudent = async(id,truthvalue) => {
-    const res=await axios.patch(`http://localhost:5000/register/updateTask/${id}/${truthvalue}`);
+    const res=await axios.patch(`https://artc-website-production.up.railway.app/register/updateTask/${id}/${truthvalue}`);
     return res;
 }
