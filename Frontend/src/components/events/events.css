@@ -133,6 +133,7 @@
   width: 100%;
   margin-bottom: 0.3 rem;
 }
+
 @media (min-width:350px) and (max-width:500px) {
   #events h2 {
     text-align: center;

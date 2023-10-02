@@ -47,12 +47,9 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
       Swal.fire('Please fill all the fields')
     } else if (phone.length !== 10) {
       Swal.fire('Please enter a valid phone number')
-      return
     }
-    // const key= await axios.get("http://localhost:5000/payment/getKey")
-    const {data:{order}} = await axios.post("http://localhost:5000/payment/checkout");
-    // const successful = await axios.get("http://localhost:5000/payment/paymentverification")
-    // console.log(data1);
+    const {data:{order}} = await axios.post("http://https://artc-website-production.up.railway.app/payment/checkout");
+    
     const options = {
       "key":"rzp_test_8N5cWng2se0xIQ", // Enter the Key ID generated from the Dashboard
       "amount": "7000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -69,7 +66,6 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             phone: phone,
             email: email,
           };
-          // Make the API call to create a new student here
           try {
             const res = await API.createNewStudent(data1);
             console.log(res);
