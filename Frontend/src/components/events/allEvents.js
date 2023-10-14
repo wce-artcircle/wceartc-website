@@ -1,4 +1,4 @@
-import pic from '../../assets/kalarambha2023.jpeg'
+import pic from '../../assets/2023-navratri.png'
 import Yuvarangimg from '../../assets/yuvarang-23.jpeg'
 import Photocontest from '../../assets/photography-contest.png'
 import farewell from '../../assets/farewell.png'
@@ -8,9 +8,9 @@ import dandiya from '../../assets/dandiya-nights.png'
 const events = [
   {
     index: 1,
-    Name: 'GIM 2023',
+    Name: 'Dandiya Nights 2023',
     description:
-      'Kalarambh is the most awaited and most celebrated event of ArtCircle. It is basically General interest meet(GIM) arranged for newly admitted first year members to get the overall idea about the ArtCircle and events arranged by ArtCircle. Kalarambh is the golden opportunity for all the teams of ArtCircle to showcase their talent and encourage the new artists to be a part of ArtCircle to enhance and polish their artistic skills by joining ArtCircle.As the name suggests its the beautiful beginning of the art for the first year members in their 4 year journey with WCE. We wait for you to join us and be a part of this beautiful journey.',
+      'Dandiya Nights is the most awaited program of WCE ART Circle, which typically falls in October. It is celebrated at Open Air Theatre of WCE with great energy and enthusiasm. The members of Art Circle perform dandiya dance which is set beforehand. On the event day, individuals attire themselves in the traditional Gujarati fashion. Dandiyas(sticks) are also provided by the club. An energetic and colourful aura is formed with the beats of song and dance.',
     icon: pic,
   },
   {

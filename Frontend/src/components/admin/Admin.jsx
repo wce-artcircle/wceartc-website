@@ -49,6 +49,28 @@ const Admin = () => {
         }
         setuserDetails([...userDetails])
         const updateCheck = await API.updateStudent(index, e);
+        
+    } catch (error) {
+      console.error('Error updating checkbox:', error);
+    }
+  };
+
+  const verifyCheckBox = async (e, index) => {
+    if(!e){
+        alert('user is already marked')
+        return
+    }
+    
+    try {
+        for(let i=0;i<userDetails.length;i++){
+            if(userDetails[i]._id===index){
+                userDetails[i].verified=e
+                break
+            }
+        }
+        setuserDetails([...userDetails])
+        const verifyCheck = await API.verifyStudent(index, e);
+        
     } catch (error) {
       console.error('Error updating checkbox:', error);
     }
@@ -72,11 +94,9 @@ const Admin = () => {
               <th>Name</th>
               <th>Transaction Id</th>
               <th>PRN</th>
-              
-              
               <th>OTP</th>
               <th>Scanned</th>
-              
+              <th>Verified</th>
             </tr>
           </thead>
           <tbody>
@@ -94,6 +114,15 @@ const Admin = () => {
                     checked={user.visited}
                     onChange={(e) => {
                       handleCheckBox(e.target.checked, user._id);
+                    }}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="checkbox"
+                    checked={user.verified}
+                    onChange={(e) => {
+                      verifyCheckBox(e.target.checked, user._id);
                     }}
                   />
                 </td>

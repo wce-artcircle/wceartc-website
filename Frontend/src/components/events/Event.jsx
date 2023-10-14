@@ -3,12 +3,14 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import * as API from '../../API/registerAPI'
 import './events.css'
-import gimQR from '../../assets/favi.png'
+import withDandiya from '../../assets/navratri-with.jpg'
+import withoutDandiya from '../../assets/navratri-without.jpg'
 
 const Event = ({ index, idx, Name, date, description, icon }) => {
+  
   const [isOpen, setIsOpen] = useState(false)
   const [descp, setDescp] = useState(false)
-
+    const [img, setimg] = useState(withDandiya)
   const openModal = () => {
     setIsOpen(true)
   }
@@ -21,12 +23,13 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   useEffect(() => {
     setTruncatedDescription(description.slice(0, 50) + '...')
     console.log(index)
-  }, [description])
+  }, [description,img])
 
   const [name, setName] = useState()
   const [prn, setPrn] = useState()
   const [phone, setPhone] = useState()
   const [email, setEmail] = useState()
+  const [transactionId,setTransactionId]=useState()
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -40,64 +43,42 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
   }
+  const handletransactionIdChange=(e) =>{
+    setTransactionId(e.target.value)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!name || !prn || !phone || !email) {
+    console.log(name, prn, phone, email)
+    if (!name || !prn || !phone || !email || !transactionId) {
       Swal.fire('Please fill all the fields')
     } else if (phone.length !== 10) {
       Swal.fire('Please enter a valid phone number')
+      return;
     }
-    const {data:{order}} = await axios.post("https://artc-website-production.up.railway.app/payment/checkout");
-    
-    const options = {
-      "key":"rzp_test_8N5cWng2se0xIQ", // Enter the Key ID generated from the Dashboard
-      "amount": "7000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      "currency": "INR",
-      "name": "WCE ART CIRCLE",
-      "description": "GIM 2023",
-      "image": gimQR,
-      "order_id": order.id, 
-      "handler": async function (response) {
-        if (response.razorpay_payment_id) {
-          const data1 = {
-            name: name,
-            prn: prn,
-            phone: phone,
-            email: email,
-          };
-          try {
-            const res = await API.createNewStudent(data1);
-            console.log(res);
-            if (res.status === 200) {
-              Swal.fire('Payment Successful');
-              closeModal();
-            } else {
-              Swal.fire('Payment Failed');
-            }
-          } catch (error) {
-            console.error('API Error:', error);
-            Swal.fire('Payment Failed');
-          }
-        } else {
-          Swal.fire('Payment Failed');
-        }
-      },
-      
-      "prefill": {
-          "name": name,
-          "email": email,
-          "contact": phone
-      },
-      "notes": {
-          "address": "Razorpay Corporate Office"
-      },
-      "theme": {
-          "color": "#21E6C1"
+    else if(name && prn && phone && email && transactionId){ 
+      const data = {
+        name: name,
+        prn: prn,
+        phone: phone,
+        email: email,
+        transactionId: transactionId
       }
-    };
-    var razor = new window.Razorpay(options);
-    razor.open();
+      console.log(data)
+      const res = await API.createNewStudent(data)
+      console.log(res)
+      if (res.status === 200) {
+        Swal.fire('Registered Successfully')
+        closeModal()
+      } 
+      else if(res.status===202){
+        Swal.fire('Transaction Id already used')
+        closeModal()
+      }
+      else {
+        Swal.fire('Something went wrong')
+      } 
+    }
   }
 
   return (
@@ -132,6 +113,19 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             <div className='event-form'>
               <h1>{Name}</h1>
               <form>
+              <div className='options'>
+                <button className='dandiya' onClick={(e)=>{
+                    e.preventDefault()
+                    setimg(withDandiya)
+                  }}>With Dandiya</button>
+                  <button className='dandiya' onClick={(e)=>{
+                    e.preventDefault()
+                    setimg(withoutDandiya)
+                  }}>Without Dandiya</button>
+              </div>
+                <div className='QR'>
+                  <img src={img} alt={img}/>
+                </div>
                 <input
                   type='text'
                   id='name'
@@ -156,8 +150,15 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
                   placeholder='Enter your Email Id'
                   onChange={handleEmailChange}
                 />
+                <input
+                  type='transactionId'
+                  id='transactionId'
+                  placeholder='Enter your transaction Id'
+                  onChange={handletransactionIdChange}
+                />
+                
                 <button className='btn' type='submit' onClick={handleSubmit}>
-                  Proceed to Pay
+                  Register
                 </button>
               </form>
             </div>

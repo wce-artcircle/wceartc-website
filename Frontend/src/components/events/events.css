@@ -12,6 +12,28 @@
   height: 10rem;
   width: 10rem;
 }
+.dandiya{
+  background-color:#4CC9F0;
+  border: none;
+  font-weight: 600;
+  /* height: 4rem; */
+  /* width: 4rem; */
+  margin: 0;
+  padding: 0;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.1rem;
+  align-items: center;
+  width: 100%;
+}
+.QR{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+}
 .events-container {
   display: flex;
   justify-content: center;

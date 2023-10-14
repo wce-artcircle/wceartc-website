@@ -5,7 +5,7 @@ export const createNewStudent = async(data) => {
     return res;
 }
 export const verifyOTP = async(data) => {
-    const res=await axios.patch("https://artc-website-production.up.railway.app/register/",data);
+    const res=await axios.patch("http://localhost:5000/register/",data);
     return res;
 }
 export const getAllRegisteredStudents = async() => {
@@ -17,3 +17,9 @@ export const updateStudent = async(id,truthvalue) => {
     const res=await axios.patch(`https://artc-website-production.up.railway.app/register/updateTask/${id}/${truthvalue}`);
     return res;
 }
+
+export const verifyStudent = async(id,truthvalue) => {
+    const res=await axios.patch(`https://artc-website-production.up.railway.app/register/verifyTask/${id}/${truthvalue}`);
+    return res;
+}
+//https://artc-website-production.up.railway.app
