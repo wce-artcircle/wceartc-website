@@ -5,7 +5,7 @@ export const createNewStudent = async(data) => {
     return res;
 }
 export const verifyOTP = async(data) => {
-    const res=await axios.patch("http://localhost:5000/register/",data);
+    const res=await axios.patch("https://artc-website-production.up.railway.app/register/",data);
     return res;
 }
 export const getAllRegisteredStudents = async() => {
