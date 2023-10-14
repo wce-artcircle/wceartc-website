@@ -93,6 +93,7 @@ const Admin = () => {
               <th>Phone Number</th>
               <th>Name</th>
               <th>Transaction Id</th>
+              <th>Amount Paid</th>
               <th>PRN</th>
               <th>OTP</th>
               <th>Scanned</th>
@@ -105,6 +106,7 @@ const Admin = () => {
                 <td>{user.phone}</td>
                 <td>{user.name}</td>
                 <td>{user.transactionId}</td>
+                <td>{user.amount?user.amount:"N/A"}</td>
                 <td>{user.prn}</td>
                 
                 <td>{user.otp}</td>
