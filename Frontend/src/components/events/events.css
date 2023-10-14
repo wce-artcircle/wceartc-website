@@ -16,18 +16,23 @@
   background-color:#4CC9F0;
   border: none;
   font-weight: 600;
-  /* height: 4rem; */
-  /* width: 4rem; */
+  height: 2rem;
+  width: 10rem;
   margin: 0;
   padding: 0;
 }
 .options {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 0.1rem;
-  align-items: center;
+  /* border: 2px solid black; */
   width: 100%;
+  height: 2rem;
+  /* font-size: 12px; */
+}
+#cb{
+  margin: 0;
+  height: 1rem;
+  margin-left: -6rem;
+  margin-top: 0.3rem;
 }
 .QR{
   display:flex ;

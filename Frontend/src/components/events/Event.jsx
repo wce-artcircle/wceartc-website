@@ -10,7 +10,8 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   
   const [isOpen, setIsOpen] = useState(false)
   const [descp, setDescp] = useState(false)
-    const [img, setimg] = useState(withDandiya)
+  const [img, setimg] = useState(withoutDandiya)
+  const [amount, setAmount] = useState("70/-")
   const openModal = () => {
     setIsOpen(true)
   }
@@ -62,7 +63,8 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
         prn: prn,
         phone: phone,
         email: email,
-        transactionId: transactionId
+        transactionId: transactionId,
+        amount: amount
       }
       console.log(data)
       const res = await API.createNewStudent(data)
@@ -113,19 +115,22 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             <div className='event-form'>
               <h1>{Name}</h1>
               <form>
-              <div className='options'>
-                <button className='dandiya' onClick={(e)=>{
-                    e.preventDefault()
-                    setimg(withDandiya)
-                  }}>With Dandiya</button>
-                  <button className='dandiya' onClick={(e)=>{
-                    e.preventDefault()
-                    setimg(withoutDandiya)
-                  }}>Without Dandiya</button>
-              </div>
                 <div className='QR'>
                   <img src={img} alt={img}/>
                 </div>
+                <div className='options' style={{marginLeft:'6rem'}}>
+                *With dandiya
+              <input type="checkbox"  id='cb'  onChange={(e)=>{
+                if(e.target.checked){
+                  setAmount("110/-")
+                  setimg(withDandiya)
+                }
+                else{
+                  setAmount("70/-")
+                  setimg(withoutDandiya)
+                }
+              }}  />
+              </div>
                 <input
                   type='text'
                   id='name'
@@ -155,6 +160,10 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
                   id='transactionId'
                   placeholder='Enter your transaction Id'
                   onChange={handletransactionIdChange}
+                />
+                <input
+                  value={amount}
+                  contentEditable={false}
                 />
                 
                 <button className='btn' type='submit' onClick={handleSubmit}>
