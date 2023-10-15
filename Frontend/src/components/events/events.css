@@ -73,8 +73,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 28rem;
+  width: 40rem;
+  height: 45rem;
   text-align: center;
+  margin-top: 5rem;
+  /* overflow-y:scroll ; */
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
 }
 .event-image img {
   width: 20rem;
@@ -207,6 +212,9 @@
     align-items: center;
     width: 15rem;
     text-align: center;
+    margin: 0px;
+    /* margin-top: 10rem;
+    margin-bottom: 20rem; */
   }
   .event-image img {
     width: 15rem;
@@ -266,7 +274,7 @@
     top: 20rem;
     left: 2.5rem;
     width: 10rem;
-    height: 9rem;
+    height: 15rem;
     margin-left: 2rem;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -278,13 +286,16 @@
   .modal-content {
     background-color: white;
     /* padding: 20px; */
-    margin-left: 5rem;
+    margin-left: 8rem;
     width: 15rem;
     border-radius: 10px;
     color: black;
     font-weight: 300;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    /* height: 100rem; */
+    height: 54rem;
+    align-items: center;
   }
   
   .close {

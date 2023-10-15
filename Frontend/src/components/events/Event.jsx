@@ -10,8 +10,9 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   
   const [isOpen, setIsOpen] = useState(false)
   const [descp, setDescp] = useState(false)
-  const [img, setimg] = useState(withoutDandiya)
-  const [amount, setAmount] = useState("70/-")
+  const [img, setimg] = useState(withDandiya)
+  // const [text,setText]=useState("With Dandiya");
+  const [amount, setAmount] = useState("110/-")
   const openModal = () => {
     setIsOpen(true)
   }
@@ -119,56 +120,72 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
                   <img src={img} alt={img}/>
                 </div>
                 <div className='options' style={{marginLeft:'6rem'}}>
-                *With dandiya
+                *Without dandiya
+                
               <input type="checkbox"  id='cb'  onChange={(e)=>{
                 if(e.target.checked){
-                  setAmount("110/-")
-                  setimg(withDandiya)
-                }
-                else{
                   setAmount("70/-")
                   setimg(withoutDandiya)
                 }
+                else{
+                  setAmount("110/-")
+                  setimg(withDandiya)
+                }
               }}  />
               </div>
-                <input
-                  type='text'
-                  id='name'
-                  placeholder='Enter your Name'
-                  onChange={handleNameChange}
-                />
-                <input
-                  type='text'
-                  id='prn'
-                  placeholder='Enter your PRN'
-                  onChange={handlePrnChange}
-                />
-                <input
-                  type='text'
-                  id='phone'
-                  placeholder='Enter your Mobile Number'
-                  onChange={handlePhoneChange}
-                />
-                <input
-                  type='email'
-                  id='email'
-                  placeholder='Enter your Email Id'
-                  onChange={handleEmailChange}
-                />
-                <input
-                  type='transactionId'
-                  id='transactionId'
-                  placeholder='Enter your transaction Id'
-                  onChange={handletransactionIdChange}
-                />
-                <input
-                  value={amount}
-                  contentEditable={false}
-                />
-                
-                <button className='btn' type='submit' onClick={handleSubmit}>
-                  Register
-                </button>
+
+              {/* <div className='inputTag'> */}
+                  <input
+                    value={amount}
+                    contentEditable={false}
+                    className='inputTag'
+                    style={{height:'10px',margin:'3px'}}
+                  />
+                  <input
+                    type='text'
+                    id='name'
+                    placeholder='Enter your Name'
+                    onChange={handleNameChange}
+                    className='inputTag'
+                    style={{height:'10px',margin:'3px'}}
+                  />
+                  <input
+                    type='text'
+                    id='prn'
+                    placeholder='Enter your PRN'
+                    onChange={handlePrnChange}
+                    className='inputTag'
+                    style={{height:'10px',margin:'3px'}}
+                  />
+                  <input
+                    type='text'
+                    id='phone'
+                    placeholder='Enter your Mobile Number'
+                    onChange={handlePhoneChange}
+                    className='inputTag'
+                    style={{height:'10px',margin:'3px'}}
+                  />
+                  <input
+                    type='email'
+                    id='email'
+                    placeholder='Enter your Email Id'
+                    onChange={handleEmailChange}
+                    className='inputTag'
+                    style={{height:'10px',margin:'3px'}}
+                  />
+                  <input
+                    type='transactionId'
+                    id='transactionId'
+                    placeholder='Enter your transaction Id'
+                    onChange={handletransactionIdChange}
+                    style={{height:'10px',margin:'3px'}}
+                  />
+                  
+                  
+                  <button className='btn' type='submit' onClick={handleSubmit} >
+                    Register
+                  </button>
+               
               </form>
             </div>
           </div>
