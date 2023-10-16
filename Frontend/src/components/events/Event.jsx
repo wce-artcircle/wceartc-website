@@ -3,8 +3,8 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import * as API from '../../API/registerAPI'
 import './events.css'
-import withDandiya from '../../assets/navratri-with.jpg'
-import withoutDandiya from '../../assets/navratri-without.jpg'
+import withDandiya from '../../assets/dandiya150.jpeg'
+import withoutDandiya from '../../assets/dandiya100.jpeg'
 
 const Event = ({ index, idx, Name, date, description, icon }) => {
   
@@ -12,7 +12,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
   const [descp, setDescp] = useState(false)
   const [img, setimg] = useState(withDandiya)
   // const [text,setText]=useState("With Dandiya");
-  const [amount, setAmount] = useState("110/-")
+  const [amount, setAmount] = useState("150/-")
   const openModal = () => {
     setIsOpen(true)
   }
@@ -124,11 +124,11 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
                 
               <input type="checkbox"  id='cb'  onChange={(e)=>{
                 if(e.target.checked){
-                  setAmount("70/-")
+                  setAmount("100/-")
                   setimg(withoutDandiya)
                 }
                 else{
-                  setAmount("110/-")
+                  setAmount("150/-")
                   setimg(withDandiya)
                 }
               }}  />
