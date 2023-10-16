@@ -286,7 +286,7 @@
   .modal-content {
     background-color: white;
     /* padding: 20px; */
-    margin-left: 8rem;
+    margin-left: 6rem;
     width: 15rem;
     border-radius: 10px;
     color: black;
@@ -295,7 +295,7 @@
     padding-right: 1.5rem;
     /* height: 100rem; */
     height: 54rem;
-    align-items: center;
+    
   }
   
   .close {
