@@ -97,12 +97,12 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
             <button className='btn' onClick={() => setDescp(true)}>
               Read More
             </button>
-            <button
+            {/* <button
               className={`${idx === 1 ? '' : 'hidden'} btn`}
               onClick={openModal}
             >
               Register
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
