@@ -13,15 +13,16 @@
     align-items: center;
     margin: 0;
     margin-left: 5rem;
+    margin-bottom: 1rem;
   }
   .landing h1{
-    margin-bottom: 30rem;
+    margin-bottom: 25rem;
     font-size: 6rem;
     font-weight: bolder;
   }
 .landing button{
   margin-left: -48rem;
-  margin-top: -15rem;
+  margin-top: -12rem;
   padding: 1rem 1rem;
   border-radius: 5px;
   border: none;
@@ -42,6 +43,15 @@
       margin: 0;
       margin-left: 5rem;
     }
+    .landing h1{
+      margin-bottom: 17rem;
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-left: auto;
+      margin-right: 1rem;
+      margin-left: 11rem;
+      padding: 0;
+    }
       
       .landing button{
         /* margin-left: -48rem;
@@ -58,15 +68,6 @@
       }
     }
 
-    .landing h1{
-      margin-bottom: 17rem;
-      font-size: 3rem;
-      font-weight: bolder;
-      /* margin-left: auto; */
-      margin-right: 2rem;
-    
-    
-  }
   @media (min-width:350px) and (max-width:500px) {
     .landing {
       height: 100vh;
@@ -84,19 +85,20 @@
       font-weight: bolder;
       /* margin-left: auto; */
       /* margin-right: 1rem; */
-      margin-left: 11rem;
+      margin-left: 10rem;
+      width: fit-content;
       padding: 0;
     } 
 
     .landing button{
-      margin-left: -33rem;
+      margin-left: -21rem;
       margin-top: -42rem;
       padding: 0.5rem 0.5rem;
       border-radius: 5px;
       border: none;
       background-color: #21E6C1;
       color: white;
-      font-size: 0.5rem;
+      font-size: 0.8rem;
       font-weight: bolder;
       cursor: pointer;
       transition: 0.3s;
