@@ -6,6 +6,7 @@ import TermsandConditions from './components/policies/TermsandConditions';
 import ServicePricing from './components/policies/ServicePricing';
 import PrivacyPolicy from './components/policies/Privacypolicy';
 import CancellationandRefundPolicy from './components/policies/CancelandRefund';
+import MainPage from './components/yuvarang/MainPage';
  
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route exact path='/service-pricing' element = {<ServicePricing/>}/>
           <Route exact path='/privacy-policy' element = {<PrivacyPolicy/>}/>
           <Route exact path='/cancellation-and-refund-policy' element = {<CancellationandRefundPolicy/>}/>
+          <Route exact path='/yuvarang' element={<MainPage/>} />
         </Routes>
       </BrowserRouter>
     </>
