@@ -19,7 +19,7 @@ const App = () => {
           <Route exact path='/service-pricing' element = {<ServicePricing/>}/>
           <Route exact path='/privacy-policy' element = {<PrivacyPolicy/>}/>
           <Route exact path='/cancellation-and-refund-policy' element = {<CancellationandRefundPolicy/>}/>
-          <Route exact path='/yuvarang' element={<MainPage/>} />
+          <Route exact path='/yuvarang2024' element={<MainPage/>} />
         </Routes>
       </BrowserRouter>
     </>

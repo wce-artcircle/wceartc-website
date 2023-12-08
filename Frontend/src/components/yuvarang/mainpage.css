@@ -1,14 +1,9 @@
 
 .mainpage__container {
-    /* background-image: url("../../assets/yuvarang-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     height: 100vh;
     width: 100%;
     position: relative;
     margin-top: -6rem;
-    z-index: -1;
 }
 
 .blurWrapper {
@@ -21,38 +16,42 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* filter: blur(2px); Apply the blur here */
-    z-index: -1; /* Move the blur behind other content */
+    filter: blur(2px);
+    z-index: -1;
 }
 
-.bgImage{
+.bgImage {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.bgImage button{
-    background: #000000;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 10px;
-    margin-top: 29rem;
-    border: 2px solid #fff;
-    font-size: 1.2rem;
-    box-shadow: 0 0 10px rgba(72, 221, 244, 0.5);
-    cursor: pointer;
+    justify-content: center;
+    z-index: 1;
 }
 
 .bgImage img {
-    z-index: 1;
     position: absolute;
     top: 2rem;
     height: 60rem;
     width: 90rem;
     margin-top: -15rem;
-    /* other styles... */
 }
-  
+
+.bgImage button a {
+    position: absolute;
+    top: 29rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(72, 221, 244, 0.5);
+    cursor: pointer;
+    z-index: 2; /* Ensure the button is above other elements */
+}
+
 .about-yuvarang{
     display: flex;
     flex-direction: column;
@@ -123,6 +122,20 @@
     box-shadow: 0 0 10px #4fc3dc44,
     0 0 50px #4fc3dc,
     0 0 100px #4fc3dc;
+}
+
+.abt-yuva{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.abt-yuva a{
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: fit-content;
+    background-color: black;
 }
 
 @keyframes animate{
