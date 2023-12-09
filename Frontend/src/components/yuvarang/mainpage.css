@@ -154,7 +154,7 @@ html{
 }
 .bg span{
     background: -webkit-linear-gradient(white,#38495a);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
 }
 .stars{
     width:1px;
@@ -339,4 +339,76 @@ html{
     1335px 872px #fff, 1647px 1298px #fff, 1233px 1387px #fff, 698px 1036px #fff,
     659px 1860px #fff, 388px 1412px #fff, 1212px 458px #fff, 755px 1468px #fff,
     696px 1654px #fff, 1144px 60px #fff;
+}
+@media (min-width:350px) and (max-width:500px) {
+    .mainpage__container {
+        height: 90vh;
+        width: 100%;
+        position: relative;
+        margin-top: 0;
+    }
+    .bgImage{
+        height: 10rem;
+        width: fit-content;
+    }
+    .bgImage img {
+        position: absolute;
+        top: 2rem;
+        margin-left: 22rem;
+        height: 22rem;
+        width: 20rem;
+        margin-top: 2rem;
+    }
+    .abt-yuva a{
+        color: white;
+        padding: 1rem;
+        margin: 1rem;
+        width: fit-content;
+
+        background-color: black;
+    }
+    
+    .blurWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 80%;
+        width: 100%;
+        background-image: url("../../assets/yuvarang-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: blur(2px);
+        z-index: -1;
+    }
+    .about-yuvarang h1{
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 1rem;
+        margin-top: rem;
+    }
+    
+    .about-yuvarang-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        gap:3rem;
+        /* border:2px solid white; */
+    }
+    
+    .about-yuvarang-content img{
+        height: 15rem;
+        width: 20rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 10px rgba(72, 221, 244, 0.5);
+    }
+    .about-yuvarang-content img:hover{
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 0 0 10px rgba(72, 221, 244, 0.5);
+    }
 }
