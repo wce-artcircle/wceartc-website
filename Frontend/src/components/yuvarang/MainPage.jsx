@@ -43,7 +43,7 @@ const MainPage = () => {
               <p>
                 Swapnil Bandodkar will be performing live at Yuvarang 2024. Swapnil Bandodkar is a Marathi playback singer from Maharashtra, India. He is known for his work in Marathi Music Industry. He has sung songs in Hindi and Konkani as well. He is the recipient of the Best Playback Singer Award at the 2008 Maharashtra Times Awards for his song "Mala Ved Lagale" from the film. We will be having a live concert of Swapnil Bandodkar on the 2nd day of Yuvarang 2024 i.e. on 7th January 2024 in Walchand College of Engineering, Sangli.
               </p>
-              <a href='https://konfhub.com/yuvarang2024'>REGISTER</a>
+              <a href='https://konfhub.com/wceartcircle'>Book Tickets</a>
             </div>
             
           </div>
