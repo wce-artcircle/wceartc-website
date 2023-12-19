@@ -38,7 +38,6 @@
     .landing {
       height: 100vh;
       display: flex;
-      /* justify-content: center; */
       align-items: center;
       margin: 0;
       margin-left: 5rem;
@@ -54,14 +53,11 @@
     }
       
       .landing button{
-        /* margin-left: -48rem;
-        margin-top: -15rem; */
         padding: 0.5rem 0.5rem;
         border-radius: 5px;
         border: none;
         background-color: #21E6C1;
         color: white;
-        /* font-size: 0.5rem; */
         font-weight: bolder;
         cursor: pointer;
         transition: 0.3s;
@@ -72,33 +68,28 @@
     .landing {
       height: 100vh;
       display: flex;
-      /* justify-content: center; */
       align-items: center;
       margin: 0;
-      /* margin-left: 5rem; */
-    
-      
     }
     .landing h1{
       margin-bottom: 17rem;
       font-size: 3rem;
       font-weight: bolder;
-      /* margin-left: auto; */
-      /* margin-right: 1rem; */
       margin-left: 10rem;
       width: fit-content;
       padding: 0;
     } 
 
     .landing button{
-      margin-left: -23rem;
-      margin-top: -45rem;
+      margin-left: -20rem;
+      margin-top: -40rem;
       padding: 0.5rem 0.5rem;
+      height: 3rem;
       border-radius: 5px;
       border: none;
       background-color: #21E6C1;
       color: white;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: bolder;
       cursor: pointer;
       transition: 0.3s;
