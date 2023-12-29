@@ -6,6 +6,9 @@ import './mainpage.css';
 import title from '../../assets/text.png';
 import poster from '../../assets/yuvarang2k24.png';
 import concert from '../../assets/concert.jpeg';
+import media1 from '../../assets/media1.jpeg';
+import media2 from '../../assets/media2.jpeg';
+import hospitality from '../../assets/hospitality.jpeg';
 // import rulebook from ''
 
 const MainPage = () => {
@@ -47,7 +50,23 @@ const MainPage = () => {
             </div>
             
           </div>
-        
+          <div>
+            <h2>Our Sponsors</h2>
+            <div className='sponsors'>
+              <div className='sponsor'>
+                <img src={media1} alt=""/>
+                <h4>Media Partner</h4>
+              </div>
+              <div className='sponsor'>
+                <img src={media2} alt=""/>
+                <h4>Media Partner</h4>
+              </div>
+              <div className='sponsor'>
+                <img src={hospitality} alt=""/>
+                <h4>Hospitality Partner</h4>
+              </div>
+            </div>
+          </div>
       </div>
       <Footer />
     </>
