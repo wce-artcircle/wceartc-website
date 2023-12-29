@@ -7,7 +7,7 @@ const Landing = () => {
       <div className='new'>
         <div className='landing'>
           <h1>WCE ART CIRCLE</h1>
-          <button><a href='https://wceartcircle.in/yuvarang2024'>Register For Yuvarang 2024</a></button>
+          <button><a href='https://www.wceartcircle.in/yuvarang2024'>Register For <br/> <b>YUVARANG 2024</b></a></button>
         </div>
       </div>
     </>
