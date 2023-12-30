@@ -9,6 +9,7 @@ import concert from '../../assets/concert.jpeg';
 import media1 from '../../assets/media1.jpeg';
 import media2 from '../../assets/media2.jpeg';
 import hospitality from '../../assets/hospitality.jpeg';
+import food1 from '../../assets/food1.jpeg';
 // import rulebook from ''
 
 const MainPage = () => {
@@ -54,16 +55,20 @@ const MainPage = () => {
             <h2>Our Sponsors</h2>
             <div className='sponsors'>
               <div className='sponsor'>
-                <img src={media1} alt=""/>
+                <a href='https://www.instagram.com/beingsanglikarofficial?igsh=aW4yMTBvNTBmOXdy'><img src={media1} alt=""/></a>
                 <h4>Media Partner</h4>
               </div>
               <div className='sponsor'>
-                <img src={media2} alt=""/>
+                <a href='https://www.instagram.com/sanglibhukkads?igsh=cnM1cG9jNHBuNHpy'><img src={media2} alt=""/></a>
                 <h4>Media Partner</h4>
               </div>
               <div className='sponsor'>
-                <img src={hospitality} alt=""/>
+                <a href='https://www.instagram.com/hotel_devgiri.inn?igsh=OHN5eGRlc3hpcmQ5'><img src={hospitality} alt=""/></a>
                 <h4>Hospitality Partner</h4>
+              </div>
+              <div className='sponsor'>
+                <a href='https://www.instagram.com/woodcrust_?igsh=NzJndjZodmZ0MXNx'><img src={food1} alt=""/></a>
+                <h4>Food Partner</h4>
               </div>
             </div>
           </div>
