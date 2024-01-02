@@ -156,7 +156,7 @@ html{
     background: -webkit-linear-gradient(white,#38495a);
     /* -webkit-background-clip: text; */
 }
-.yuvasponserimg{
+/* .yuvasponserimg{
     display: flex;
     flex-direction: row;
     gap: 10rem;
@@ -164,7 +164,7 @@ html{
 .yuvasponserimg img{
     height: 12rem;
     width: 15rem
-}
+} */
 .stars{
     width:1px;
     height: 1px;
@@ -358,6 +358,7 @@ html{
     margin-top: 3rem;
     margin-bottom: 3rem;
     gap:3rem;
+
 }
 .sponsor{
     border-radius: 2rem;

@@ -10,6 +10,8 @@ import media1 from '../../assets/media1.jpeg';
 import media2 from '../../assets/media2.jpeg';
 import hospitality from '../../assets/hospitality.jpeg';
 import food1 from '../../assets/food1.jpeg';
+import qp from '../../assets/qp.jpg'
+import finq from '../../assets/finq.png'
 // import rulebook from ''
 
 const MainPage = () => {
@@ -53,6 +55,17 @@ const MainPage = () => {
           </div>
           <div>
             <h2>Our Sponsors</h2>
+            </div>
+            <div className='sponsors'>
+              <div className='sponsor'>
+                <a href='http://qualitypower.com/'><img src={qp} alt=""/></a>
+                <h4>Lead Sponsor</h4>
+              </div>
+              <div className='sponsor'>
+                <a href='https://finiq.com/'><img src={finq} alt=""/></a>
+                <h4>Lead Sponsor</h4>
+              </div>
+            </div>
             <div className='sponsors'>
               <div className='sponsor'>
                 <a href='https://www.instagram.com/beingsanglikarofficial?igsh=aW4yMTBvNTBmOXdy'><img src={media1} alt=""/></a>
@@ -71,7 +84,6 @@ const MainPage = () => {
                 <h4>Food Partner</h4>
               </div>
             </div>
-          </div>
       </div>
       <Footer />
     </>
