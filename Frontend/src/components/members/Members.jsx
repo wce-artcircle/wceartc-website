@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PRESIDENT from '../../assets/sarvadnya.JPG'
 import VICEPRESIDENT from '../../assets/ruturaj2.jpg'
 import SECRETARY from '../../assets/prajval.jpeg'
-import SIR from '../../assets/sir.jpeg'
+// import SIR from '../../assets/sir.jpeg'
 
 
 const Members = () => {
@@ -13,7 +13,7 @@ const Members = () => {
     <div id='members'>
       <h2>Our Leaders</h2>
       <div className='group'>
-      <div className="member">
+      {/* <div className="member">
           <div className="member-image">
             <img src={SIR} alt=''/>
           </div>
@@ -27,7 +27,7 @@ const Members = () => {
               <a href='https://www.instagram.com/wce_artcircle/' target={'_blank'}><InstagramIcon fontSize='large'/></a>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="member">
           <div className="member-image">
             <img src={PRESIDENT} alt=''/>
