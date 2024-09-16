@@ -22,8 +22,8 @@ const Members = () => {
               <h6>Staff Advisor-WCE ART CIRCLE</h6>
             </div>
             <div className="member-socials">
-              <a href='https://www.linkedin.com/company/wce-art-circle/' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
-              <a href='https://www.instagram.com/wce_artcircle/' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+              <a href='https://www.linkedin.com/company/wce-art-circle/' target='_blank' rel='noreferrer'><LinkedInIcon fontSize='large'/></a>
+              <a href='https://www.instagram.com/wce_artcircle/' target='_blank' rel='noreferrer'><InstagramIcon fontSize='large'/></a>
             </div>
           </div>
         </div> */}
@@ -42,13 +42,13 @@ const Members = () => {
             <div className="member-socials">
               <a
                 href="https://www.linkedin.com/in/anjali-patil-2ba91a280/"
-                target={"_blank"}
+                target='_blank' rel='noreferrer'
               >
                 <LinkedInIcon fontSize="large" />
               </a>
               <a
                 href="https://www.instagram.com/nrutyanjalii/"
-                target={"_blank"}
+                target='_blank' rel='noreferrer'
               >
                 <InstagramIcon fontSize="large" />
               </a>
@@ -65,8 +65,8 @@ const Members = () => {
               <h6>Vice-President-WCE ART CIRCLE</h6>
             </div>
             <div className="member-socials">
-              <a href='https://www.linkedin.com/in/ruturaj-chikurde-72033b243' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
-              <a href='https://www.instagram.com/r__ruturaj/?igshid=ZDdkNTZiNTM%3D' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+              <a href='https://www.linkedin.com/in/ruturaj-chikurde-72033b243' target='_blank' rel='noreferrer'><LinkedInIcon fontSize='large'/></a>
+              <a href='https://www.instagram.com/r__ruturaj/?igshid=ZDdkNTZiNTM%3D' target='_blank' rel='noreferrer'><InstagramIcon fontSize='large'/></a>
             </div>
           </div>
         </div> */}
@@ -86,13 +86,13 @@ const Members = () => {
             <div className="member-socials">
               <a
                 href="https://www.linkedin.com/in/shruti-chavan-4a3b32272/"
-                target={"_blank"}
+                target='_blank' rel='noreferrer'
               >
                 <LinkedInIcon fontSize="large" />
               </a>
               {/* <a
                 href="https://instagram.com/prajval_tayde_patil?igshid=MzRlODBiNWFlZA=="
-                target={"_blank"}
+                target='_blank' rel='noreferrer'
               >
                 <InstagramIcon fontSize="large" />
               </a> */}

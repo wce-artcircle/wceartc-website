@@ -22,10 +22,10 @@ const Footer = () => {
           <div className='media-container'>
             <p className='stay-tuned'>Stay Tuned!</p>
             <div className='icons'>
-              <a href='https://www.linkedin.com/company/wce-art-circle/' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
-              <a href='https://www.instagram.com/wce_artcircle/' target={'_blank'}><InstagramIcon fontSize='large'/></a>
-              <a href='https://youtube.com/@wceartcircle' target={'_blank'}><YouTubeIcon fontSize='large'/></a>
-              <a href='https://m.facebook.com/wceartcircle/' target={'_blank'}><FacebookIcon fontSize='large'/></a>
+              <a href='https://www.linkedin.com/company/wce-art-circle/' target='_blank' rel='noreferrer'><LinkedInIcon fontSize='large'/></a>
+              <a href='https://www.instagram.com/wce_artcircle/' target='_blank' rel='noreferrer'><InstagramIcon fontSize='large'/></a>
+              <a href='https://youtube.com/@wceartcircle' target='_blank' rel='noreferrer'><YouTubeIcon fontSize='large'/></a>
+              <a href='https://m.facebook.com/wceartcircle/' target='_blank' rel='noreferrer'><FacebookIcon fontSize='large'/></a>
             </div>
             <div className='copy-rights'>
               <p>ALL RIGHTS RESERVED &#169;  WCEARTCIRCLE </p>

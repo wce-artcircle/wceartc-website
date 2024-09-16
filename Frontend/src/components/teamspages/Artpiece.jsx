@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Artpiece.css";
-import { InstagramEmbed, YoutubeEmbed } from "react-social-media-embed";
+import { InstagramEmbed} from "react-social-media-embed";
 
 function Artpiece({ artpiece }) {
   const [isModalOpen, setModalOpen] = useState(false);

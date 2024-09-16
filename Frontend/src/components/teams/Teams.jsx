@@ -1,11 +1,11 @@
 // import React, { useState } from 'react'
 import { motion } from "framer-motion";
-import {
-  CarouselComponent,
-  CarouselItemsDirective,
-  CarouselItemDirective,
-} from "@syncfusion/ej2-react-navigations";
-import * as ReactDOM from "react-dom";
+// import {
+//   CarouselComponent,
+//   CarouselItemsDirective,
+//   CarouselItemDirective,
+// } from "@syncfusion/ej2-react-navigations";
+// import * as ReactDOM from "react-dom";
 import Slideshow from "./Slideshow";
 import "./teams.css";
 import DANCE from "../../assets/dance.jpg";

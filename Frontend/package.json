@@ -1,6 +1,6 @@
 {
   "name": "artc-website",
-  "homepage": "https://User-DK.github.io/wceartc-website",
+ 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
