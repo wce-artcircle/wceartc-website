@@ -1,19 +1,18 @@
-import React from 'react'
-import './members.css'
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PRESIDENT from '../../assets/sarvadnya.JPG'
-import VICEPRESIDENT from '../../assets/ruturaj2.jpg'
-import SECRETARY from '../../assets/prajval.jpeg'
+import React from "react";
+import "./members.css";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import PRESIDENT from "../../assets/images/president.jpg";
+// import VICEPRESIDENT from "../../assets/ruturaj2.jpg";
+// import SECRETARY from "../../assets/images/secretary.jpg";
 // import SIR from '../../assets/sir.jpeg'
-
 
 const Members = () => {
   return (
-    <div id='members'>
+    <div id="members">
       <h2>Our Leaders</h2>
-      <div className='group'>
-      {/* <div className="member">
+      <div className="group">
+        {/* <div className="member">
           <div className="member-image">
             <img src={SIR} alt=''/>
           </div>
@@ -30,20 +29,33 @@ const Members = () => {
         </div> */}
         <div className="member">
           <div className="member-image">
-            <img src={PRESIDENT} alt=''/>
+            <img
+              src="https://raw.githubusercontent.com/wce-artcircle/Assets/main/heads/president.jpg"
+              alt="Anjali Patil"
+            />
           </div>
           <div className="member-info">
-            <div className='member-name'>
-              <h5>Sarvadnya More</h5>
+            <div className="member-name">
+              <h5>Anjali Patil</h5>
               <h6>President-WCE ART CIRCLE</h6>
             </div>
             <div className="member-socials">
-              <a href='https://www.linkedin.com/company/wce-art-circle/mycompany/' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
-              <a href='https://instagram.com/smile_with_sarvadnya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+              <a
+                href="https://www.linkedin.com/in/anjali-patil-2ba91a280/"
+                target={"_blank"}
+              >
+                <LinkedInIcon fontSize="large" />
+              </a>
+              <a
+                href="https://www.instagram.com/nrutyanjalii/"
+                target={"_blank"}
+              >
+                <InstagramIcon fontSize="large" />
+              </a>
             </div>
           </div>
         </div>
-        <div className="member">
+        {/* <div className="member">
           <div className="member-image">
             <img src={VICEPRESIDENT} alt=''/>
           </div>
@@ -57,26 +69,39 @@ const Members = () => {
               <a href='https://www.instagram.com/r__ruturaj/?igshid=ZDdkNTZiNTM%3D' target={'_blank'}><InstagramIcon fontSize='large'/></a>
             </div>
           </div>
-        </div>
-        
+        </div> */}
+
         <div className="member">
           <div className="member-image">
-            <img src={SECRETARY} alt=''/>
+            <img
+              src="https://raw.githubusercontent.com/wce-artcircle/Assets/main/heads/secretary.jpg"
+              alt="Shruti Chavan"
+            />
           </div>
           <div className="member-info">
-            <div className='member-name'>
-              <h5>Prajval Tayde</h5>
+            <div className="member-name">
+              <h5>Shruti Chavan</h5>
               <h6>Secretary-WCE ART CIRCLE</h6>
             </div>
             <div className="member-socials">
-              <a href='https://www.linkedin.com/in/prajvaltayde' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
-              <a href='https://instagram.com/prajval_tayde_patil?igshid=MzRlODBiNWFlZA==' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+              <a
+                href="https://www.linkedin.com/in/shruti-chavan-4a3b32272/"
+                target={"_blank"}
+              >
+                <LinkedInIcon fontSize="large" />
+              </a>
+              {/* <a
+                href="https://instagram.com/prajval_tayde_patil?igshid=MzRlODBiNWFlZA=="
+                target={"_blank"}
+              >
+                <InstagramIcon fontSize="large" />
+              </a> */}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Members
+export default Members;

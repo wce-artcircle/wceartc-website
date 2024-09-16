@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+
+
 import './teams.css'
-const Slideshow = ({ images, desc }) => {
+const Slideshow = ({ images, desc, navlink }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -13,6 +16,12 @@ const Slideshow = ({ images, desc }) => {
       clearInterval(intervalId) // Clear the interval when the component unmounts
     }
   }, [currentIndex, images.length])
+
+  const navigate = useNavigate();
+
+  const handleSlideClick = (navlink) =>{
+    navigate(navlink);
+  }
 
   //   const nextSlide = () => {
   //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -27,9 +36,9 @@ const Slideshow = ({ images, desc }) => {
   return (
     <div id='teams'>
       <div className='Slide'>
-        <h2>Our Teams</h2>
+        <h2>Our Teams And Their Artforms</h2>
         <div className='slideshow'>
-          <div className='slideContent'>
+          <div className='slideContent' onClick={()=>handleSlideClick(navlink[currentIndex])}>
             <img
               className='silder-img'
               src={images[currentIndex]}

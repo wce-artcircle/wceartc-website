@@ -1,100 +1,99 @@
 import React, { useState, useEffect } from 'react'
-import Swal from 'sweetalert2'
-import axios from 'axios'
-import * as API from '../../API/registerAPI'
+// import Swal from 'sweetalert2'
+// import axios from 'axios'
+// import * as API from '../../API/registerAPI'
 import './events.css'
-import withDandiya from '../../assets/dandiya150.jpeg'
-import withoutDandiya from '../../assets/dandiya100.jpeg'
+import './events.css'
 
-const Event = ({ index, idx, Name, date, description, icon }) => {
+const Event = ({ index, idx, Name, date, description, icon, more }) => {
   
-  const [isOpen, setIsOpen] = useState(false)
+  // const [isOpen, setIsOpen] = useState(false)
   const [descp, setDescp] = useState(false)
-  const [img, setimg] = useState(withDandiya)
+  // const [img, setimg] = useState(withDandiya)
   // const [text,setText]=useState("With Dandiya");
-  const [amount, setAmount] = useState("150/-")
-  const openModal = () => {
-    setIsOpen(true)
-  }
+  // const [amount, setAmount] = useState("150/-")
+  // const openModal = () => {
+  //   setIsOpen(true)
+  // }
 
-  const closeModal = () => {
-    setIsOpen(false)
-  }
+  // const closeModal = () => {
+  //   setIsOpen(false)
+  // }
 
   const [truncatedDescription, setTruncatedDescription] = useState('')
   useEffect(() => {
     setTruncatedDescription(description.slice(0, 50) + '...')
-    console.log(index)
-  }, [description,img])
+  }, [description])
 
-  const [name, setName] = useState()
-  const [prn, setPrn] = useState()
-  const [phone, setPhone] = useState()
-  const [email, setEmail] = useState()
-  const [transactionId,setTransactionId]=useState()
+  // const [name, setName] = useState()
+  // const [prn, setPrn] = useState()
+  // const [phone, setPhone] = useState()
+  // const [email, setEmail] = useState()
+  // const [transactionId,setTransactionId]=useState()
 
-  const handleNameChange = (e) => {
-    setName(e.target.value)
-  }
-  const handlePrnChange = (e) => {
-    setPrn(e.target.value)
-  }
-  const handlePhoneChange = (e) => {
-    setPhone(e.target.value)
-  }
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value)
-  }
-  const handletransactionIdChange=(e) =>{
-    setTransactionId(e.target.value)
-  }
+  // const handleNameChange = (e) => {
+  //   setName(e.target.value)
+  // }
+  // const handlePrnChange = (e) => {
+  //   setPrn(e.target.value)
+  // }
+  // const handlePhoneChange = (e) => {
+  //   setPhone(e.target.value)
+  // }
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value)
+  // }
+  // const handletransactionIdChange=(e) =>{
+  //   setTransactionId(e.target.value)
+  // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(name, prn, phone, email)
-    if (!name || !prn || !phone || !email || !transactionId) {
-      Swal.fire('Please fill all the fields')
-    } else if (phone.length !== 10) {
-      Swal.fire('Please enter a valid phone number')
-      return;
-    }
-    else if(name && prn && phone && email && transactionId){ 
-      const data = {
-        name: name,
-        prn: prn,
-        phone: phone,
-        email: email,
-        transactionId: transactionId,
-        amount: amount
-      }
-      console.log(data)
-      const res = await API.createNewStudent(data)
-      console.log(res)
-      if (res.status === 200) {
-        Swal.fire('Registered Successfully')
-        closeModal()
-      } 
-      else if(res.status===202){
-        Swal.fire('Transaction Id already used')
-        closeModal()
-      }
-      else {
-        Swal.fire('Something went wrong')
-      } 
-    }
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   console.log(name, prn, phone, email)
+  //   if (!name || !prn || !phone || !email || !transactionId) {
+  //     Swal.fire('Please fill all the fields')
+  //   } else if (phone.length !== 10) {
+  //     Swal.fire('Please enter a valid phone number')
+  //     return;
+  //   }
+  //   else if(name && prn && phone && email && transactionId){ 
+  //     const data = {
+  //       name: name,
+  //       prn: prn,
+  //       phone: phone,
+  //       email: email,
+  //       transactionId: transactionId,
+  //       amount: amount
+  //     }
+  //     console.log(data)
+  //     const res = await API.createNewStudent(data)
+  //     console.log(res)
+  //     if (res.status === 200) {
+  //       Swal.fire('Registered Successfully')
+  //       closeModal()
+  //     } 
+  //     else if(res.status===202){
+  //       Swal.fire('Transaction Id already used')
+  //       closeModal()
+  //     }
+  //     else {
+  //       Swal.fire('Something went wrong')
+  //     } 
+  //   }
+  // }
+
 
   return (
     <div>
-      <div className='event'>
-        <div className='event-image'>
-          <img src={icon} alt='' />
+      <div className="event">
+        <div className="event-image">
+          <img src={icon} alt="" />
         </div>
-        <div className='event-info'>
+        <div className="event-info">
           <h1>{Name}</h1>
           <p>{truncatedDescription}</p>
-          <div className='buttons'>
-            <button className='btn' onClick={() => setDescp(true)}>
+          <div className="buttons">
+            <button className="btn" onClick={() => setDescp(true)}>
               Read More
             </button>
             {/* <button
@@ -107,6 +106,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
         </div>
       </div>
 
+      {/*
       {isOpen && (
         <div className='modal'>
           <div className='modal-content'>
@@ -134,7 +134,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
               }}  />
               </div>
 
-              {/* <div className='inputTag'> */}
+              {/* <div className='inputTag'> //
                   <input
                     value={amount}
                     contentEditable={false}
@@ -191,18 +191,19 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
           </div>
         </div>
       )}
+        */}
 
       {descp && (
-        <div className='modal'>
-          <div className='modal-content'>
-            <span className='close' onClick={() => setDescp(false)}>
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={() => setDescp(false)}>
               &times;
             </span>
-            <div className='event-descp'>
-              <div className='event-image'>
-                <img src={icon} alt='' />
+            <div className="event-descp">
+              <div className="event-image">
+                <img src={icon} alt="" />
               </div>
-              <div className='event-info'>
+              <div className="event-info">
                 <h1>{Name}</h1>
                 <p>{description}</p>
               </div>
@@ -211,7 +212,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default Event;

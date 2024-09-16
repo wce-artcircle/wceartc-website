@@ -16,7 +16,7 @@ const Main = () => {
     <Teams/>
     <Events/>
     <Members/>
-    <Footer/>  
+    <Footer/>
     </>
   )
 }

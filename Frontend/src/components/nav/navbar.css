@@ -21,7 +21,7 @@ body{
 }
 .sections{
     display: flex;
-    gap: 30px;
+    gap: 1.5rem;
     margin-right: 6rem;
     margin-left: 20rem;
     /* justify-content: ; */
@@ -29,8 +29,8 @@ body{
 }
 .sections a{
     color: white;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .sections a:hover{
     color: var(--color-primary);
