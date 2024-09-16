@@ -16,7 +16,7 @@ const artform = [
   },
   {
     video: {
-      youtube: "https://www.youtube.com/embed/pfPLvJDetK8?si=ICQHCaCpZo4v9dHy",
+      youtube: "https://www.youtube.com/embed/pfPLvJDetK8?si=i9ssHM2-CTY8RFIx",
     },
     artist: "GIM 2023",
     social: "",

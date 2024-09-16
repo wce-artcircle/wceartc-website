@@ -21,6 +21,7 @@ function Artpiece({ artpiece }) {
               allowFullScreen
               title={artpiece.title}
             ></iframe>
+            
           </div>
         ) : (
           <div className="artpiece-video">

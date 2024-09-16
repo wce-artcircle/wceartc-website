@@ -26,6 +26,14 @@ const artform = [
     artist: "Dance Team",
     team: "",
   },
+  {
+    video: {
+      youtube:
+        "https://www.youtube.com/embed/FaLjkaic_YY?si=rAcSPxcrhRgXztez",
+    },
+    artist: "Dance Team",
+    team: "",
+  },
 ];
 
 export default function DanceTeam() {

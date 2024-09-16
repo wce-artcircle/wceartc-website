@@ -1,5 +1,9 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import Main from "./Main";
 import Admin from "./components/admin/Admin";
 import TermsandConditions from "./components/policies/TermsandConditions";
@@ -16,7 +20,7 @@ import DesignTeam from "./components/teamspages/Art-DecoTeam";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/wceartc-website">
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route exact path="/adminverification" element={<Admin />} />
