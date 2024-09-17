@@ -20,7 +20,7 @@ import DesignTeam from "./components/teamspages/Art-DecoTeam";
 const App = () => {
   return (
     <>
-      <BrowserRouter basename="/wceartc-website">
+      <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route exact path="/adminverification" element={<Admin />} />
