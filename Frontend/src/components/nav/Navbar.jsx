@@ -11,7 +11,7 @@ const Navbar = () => {
         <img src={IMG} alt=''></img>
       </div>
       <div className='sections'>
-        <a href='#' onClick={()=>SetActiveNav('#')} className={activeNav==='#' ? 'active': ''}>Home</a>
+        <a href='#home' onClick={()=>SetActiveNav('#home')} className={activeNav==='#home' ? 'active': ''}>Home</a>
         <a href='#about' onClick={()=>SetActiveNav('#about')} className={activeNav==='#about' ? 'active': ''}>About Us</a>
         <a href='#teams' onClick={()=>SetActiveNav('#teams')} className={activeNav==='#teams' ? 'active': ''}>Teams</a>
         <a href='#events' onClick={()=>SetActiveNav('#events')} className={activeNav==='#events' ? 'active': ''}>Events</a>

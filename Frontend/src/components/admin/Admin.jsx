@@ -48,7 +48,7 @@ const Admin = () => {
             }
         }
         setuserDetails([...userDetails])
-        const updateCheck = await API.updateStudent(index, e);
+        // const updateCheck = await API.updateStudent(index, e);
         
     } catch (error) {
       console.error('Error updating checkbox:', error);
@@ -69,7 +69,7 @@ const Admin = () => {
             }
         }
         setuserDetails([...userDetails])
-        const verifyCheck = await API.verifyStudent(index, e);
+        // const verifyCheck = await API.verifyStudent(index, e);
         
     } catch (error) {
       console.error('Error updating checkbox:', error);
