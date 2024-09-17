@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 // import Swal from 'sweetalert2'
 // import axios from 'axios'
 // import * as API from '../../API/registerAPI'
-import './events.css'
-import './events.css'
+import "./events.css";
+import "./events.css";
 
-const Event = ({ index, idx, Name, date, description, icon, more }) => {
-  
+const Event = ({ index, idx, Name, date, description, icon, register }) => {
   // const [isOpen, setIsOpen] = useState(false)
-  const [descp, setDescp] = useState(false)
+  const [descp, setDescp] = useState(false);
   // const [img, setimg] = useState(withDandiya)
   // const [text,setText]=useState("With Dandiya");
   // const [amount, setAmount] = useState("150/-")
@@ -20,10 +19,10 @@ const Event = ({ index, idx, Name, date, description, icon, more }) => {
   //   setIsOpen(false)
   // }
 
-  const [truncatedDescription, setTruncatedDescription] = useState('')
+  const [truncatedDescription, setTruncatedDescription] = useState("");
   useEffect(() => {
-    setTruncatedDescription(description.slice(0, 50) + '...')
-  }, [description])
+    setTruncatedDescription(description.slice(0, 50) + "...");
+  }, [description]);
 
   // const [name, setName] = useState()
   // const [prn, setPrn] = useState()
@@ -56,7 +55,7 @@ const Event = ({ index, idx, Name, date, description, icon, more }) => {
   //     Swal.fire('Please enter a valid phone number')
   //     return;
   //   }
-  //   else if(name && prn && phone && email && transactionId){ 
+  //   else if(name && prn && phone && email && transactionId){
   //     const data = {
   //       name: name,
   //       prn: prn,
@@ -71,17 +70,16 @@ const Event = ({ index, idx, Name, date, description, icon, more }) => {
   //     if (res.status === 200) {
   //       Swal.fire('Registered Successfully')
   //       closeModal()
-  //     } 
+  //     }
   //     else if(res.status===202){
   //       Swal.fire('Transaction Id already used')
   //       closeModal()
   //     }
   //     else {
   //       Swal.fire('Something went wrong')
-  //     } 
+  //     }
   //   }
   // }
-
 
   return (
     <div>
@@ -96,6 +94,11 @@ const Event = ({ index, idx, Name, date, description, icon, more }) => {
             <button className="btn" onClick={() => setDescp(true)}>
               Read More
             </button>
+            {register && (
+              <a href={register} target="_blank" rel="noreferrer">
+                <button className="btn">Register Now</button>
+              </a>
+            )}
             {/* <button
               className={`${idx === 1 ? '' : 'hidden'} btn`}
               onClick={openModal}
@@ -213,6 +216,6 @@ const Event = ({ index, idx, Name, date, description, icon, more }) => {
       )}
     </div>
   );
-}
+};
 
 export default Event;

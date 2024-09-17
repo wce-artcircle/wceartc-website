@@ -17,6 +17,7 @@ const Events = () => {
               date={event.date}
               description={event.description}
               icon={event.icon}
+              register={event.register}
             />
           )
         })}
