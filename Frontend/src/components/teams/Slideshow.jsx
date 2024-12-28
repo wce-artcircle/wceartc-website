@@ -36,7 +36,7 @@ const Slideshow = ({ images, desc, navlink }) => {
   return (
     <div id='teams'>
       <div className='Slide'>
-        <h2>Our Teams And Their Artforms</h2>
+        <h2 className='rainbow-text'>Our Teams And Their Artforms</h2>
         <div className='slideshow'>
           <div className='slideContent' onClick={()=>handleSlideClick(navlink[currentIndex])}>
             <img

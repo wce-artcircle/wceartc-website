@@ -29,3 +29,26 @@ body a{
 #278EA5
 #21E6C1
 */
+
+.rainbow-text {
+      font-size: 3rem; 
+      font-weight: bold; 
+      background: linear-gradient(69deg, red, orange, yellow, rgb(12, 255, 12), rgb(83, 83, 222), rgb(127, 0, 217), rgb(255, 150, 255));
+      -webkit-background-clip: text; 
+      background-clip: text;
+      -webkit-text-fill-color: transparent; 
+}
+
+.rainbow-text1{font-size: 5rem; 
+      font-weight: bold;
+      background: linear-gradient(to right,#ffffff,#3535ff);
+      /* #0000FF */
+      /* -webkit-background-clip: text; 
+      background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      color: #000000;
+      text-shadow: 0 0 10px #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 0px;
+}

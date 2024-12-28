@@ -5,7 +5,7 @@ const Privacypolicy = () => {
   return (
     <div>
         <main id="privacy-policy">
-        <h1 className='heading1'>Privacy Policy</h1>
+        <h1 className='heading1 rainbow-text'>Privacy Policy</h1>
         <h2 className='subheading'>At WCE Art Circle, we value your privacy and handle your personal information with care:</h2>
         <ul className='points'>
             <li>Information Collection: We collect data like name, contact details, and preferences to enhance your experience.</li>
