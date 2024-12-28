@@ -77,7 +77,7 @@ const Teams = () => {
       ) : (
         <div id="teams">
           <div className="teams">
-            <h2>Our Teams And Their Artforms</h2>
+            <h2 className="rainbow-text">Our Teams And Their Artforms</h2>
           </div>
           <div className="cards">
             {[0, 1, 2, 3, 4, 5].map((index) => (

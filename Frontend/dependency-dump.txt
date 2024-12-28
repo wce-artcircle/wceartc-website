@@ -1,0 +1,11 @@
+"@emotion/react": "^11.11.1",
+"@emotion/styled": "^11.11.0",
+"@syncfusion/ej2-react-navigations": "^22.2.11",
+"sweetalert": "^2.1.2",
+        "sweetalert2": "^11.7.27",
+        "swiper": "^10.1.0",
+    "razorpay": "^2.9.2",
+        "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    
