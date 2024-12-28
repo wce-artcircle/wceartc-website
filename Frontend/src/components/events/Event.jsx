@@ -98,7 +98,7 @@ const Event = ({ index, idx, Name, date, description, icon, register }) => {
 
   return (
     <div>
-      <div className={index === 1 ? "event1" : "event"}>
+      <div className="event">
         <div className="event-image">
           <img src={icon} alt="" />
         </div>
@@ -216,7 +216,7 @@ const Event = ({ index, idx, Name, date, description, icon, register }) => {
           <div className="modal-content">
             <span className="close" onClick={() => setDescp(false)}>
               &times;
-            </span>
+            </span> 
             <div
               className="event-descp"
               style={{
@@ -225,7 +225,7 @@ const Event = ({ index, idx, Name, date, description, icon, register }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 marginLeft: isSmallScreen ? "0rem" : "20rem",
-                gap: isSmallScreen ? "0rem" : "10rem",
+                gap: isSmallScreen ? "1rem" : "10rem",
                 fontSize: isSmallScreen ? "4rem" : "1rem",
                 fontWeight: isSmallScreen ? "normal" : "bold",
               }}

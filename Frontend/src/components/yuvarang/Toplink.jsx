@@ -22,6 +22,7 @@ function Toplink() {
       <a
         href="https://konfhub.com/yuvarang-2025"
         target="_blank"
+        rel="noopener noreferrer"
         style={{
           color: "black",
           fontWeight: "bold",
