@@ -24,6 +24,7 @@
     background-size: cover;
     background-position: center;
     border: 2px solid var(--color-primary);
+    transition: width 0.5s;
   }
   .card-content {
     display: flex;
@@ -103,5 +104,9 @@
       text-align: center;
       margin-top: 40px;
     }
+  }
+  
+  .expand {
+    width: 400px;
   }
   
