@@ -1,5 +1,5 @@
 // import React, { useState } from 'react'
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 // import {
 //   CarouselComponent,
 //   CarouselItemsDirective,
@@ -42,14 +42,14 @@ const Teams = () => {
     navigate(card.link[index]);
   };
 
-  const cardVariables = {
-    expand: {
-      width: "400px",
-    },
-    collapsed: {
-      width: "200px",
-    },
-  };
+  // const cardVariables = {
+  //   expand: {
+  //     width: "400px",
+  //   },
+  //   collapsed: {
+  //     width: "200px",
+  //   },
+  // };
   const card = {
     name: [
       "Dance Team",
@@ -81,24 +81,18 @@ const Teams = () => {
           </div>
           <div className="cards">
             {[0, 1, 2, 3, 4, 5].map((index) => (
-              <motion.div
-                className={`${
-                  index === expandIndex ? "expand" : " "
-                }, cards-style`}
+              <div
+                className={`cards-style ${
+                  index === expandIndex ? "expand" : ""
+                }`}
                 key={index}
-                variants={cardVariables}
-                initial="collapsed"
-                animate={index === expandIndex ? "expand" : "collapsed"}
-                transition={{ duration: 0.5 }}
-                onHoverStart={() => {
-                  handleHover(index);
-                }}
-                onHoverEnd={() => {
-                  handleHover(index);
-                }}
+                onMouseEnter={() => handleHover(index)}
+                onMouseLeave={() => handleHover(index)}
                 onClick={() => handleCardClick(index)}
                 style={{
                   backgroundImage: `url(${card.images[index]})`,
+                  transition: "width 0.5s",
+                  width: index === expandIndex ? "400px" : "200px",
                 }}
               >
                 <div className="card-content">
@@ -107,7 +101,7 @@ const Teams = () => {
                     {index === expandIndex && <p>{card.name[index]}</p>}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
