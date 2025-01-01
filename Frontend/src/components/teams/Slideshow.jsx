@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-
-
 import './teams.css'
+
 const Slideshow = ({ images, desc, navlink }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -22,16 +21,6 @@ const Slideshow = ({ images, desc, navlink }) => {
   const handleSlideClick = (navlink) =>{
     navigate(navlink);
   }
-
-  //   const nextSlide = () => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   };
-
-  //   const prevSlide = () => {
-  //     setCurrentIndex((prevIndex) =>
-  //       prevIndex === 0 ? images.length - 1 : prevIndex - 1
-  //     );
-  //   };
 
   return (
     <div id='teams'>

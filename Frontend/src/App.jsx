@@ -5,7 +5,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Main from "./Main";
-import Admin from "./components/admin/Admin";
+// import Admin from "./components/admin/Admin";
 import TermsandConditions from "./components/policies/TermsandConditions";
 import ServicePricing from "./components/policies/ServicePricing";
 import PrivacyPolicy from "./components/policies/Privacypolicy";
@@ -23,7 +23,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route exact path="/adminverification" element={<Admin />} />
+          {/* <Route exact path="/adminverification" element={<Admin />} /> */}
           <Route
             exact
             path="/terms-and-conditions"

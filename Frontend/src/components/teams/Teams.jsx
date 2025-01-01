@@ -41,15 +41,6 @@ const Teams = () => {
   const handleCardClick = (index) => {
     navigate(card.link[index]);
   };
-
-  // const cardVariables = {
-  //   expand: {
-  //     width: "400px",
-  //   },
-  //   collapsed: {
-  //     width: "200px",
-  //   },
-  // };
   const card = {
     name: [
       "Dance Team",
