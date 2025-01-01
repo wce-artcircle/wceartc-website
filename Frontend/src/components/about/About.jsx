@@ -1,6 +1,6 @@
-import React from 'react'
-import './about.css'
-import ABTIMAGE from '../../assets/about_img.jpg'
+import React from "react";
+import "./about.css";
+import ABTIMAGE from "../../assets/about_img.jpg";
 
 const About = () => {
   return (
@@ -32,6 +32,6 @@ const About = () => {
       </div>
     </div>
   );
-}
+};
 
-export default About
+export default About;
