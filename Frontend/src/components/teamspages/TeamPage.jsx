@@ -6,7 +6,7 @@ function TeamPage({ heading, description, artform }) {
   return (
     <div className="main">
       <div className="description">
-        <h1 className="rainbow-text2">{heading}</h1>
+        <h1>{heading}</h1>
         <h3>{description}</h3>
       </div>
       <div className="exhibition-tiles">

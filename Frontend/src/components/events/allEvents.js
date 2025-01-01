@@ -4,7 +4,7 @@ const events = [
     Name: 'Yuvarang 2025',
     description:
       'Yuvarang is the signature event of Art Circle. It is the only cultural mega event of WCE Sangli. The event is open to all colleges and for all trades. Art Circle tries to cover and enhance all the artforms in all the domains - drama, dance, music or content writing like poetry sketching colouring and many more. Art Circle also gives an opportunity to school going children to showcase their talent. We members of Art Circle always try to preserve the culture,promote and encourage the artforms of India and always try to do our best in this initiative',
-    icon: "    https://cdn.statically.io/gh/wce-artcircle/Assets/main/assets/yuvarang-2025.png",
+    icon: "    https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/yuvarangf1-2025.jpg",
     register: "https://konfhub.com/yuvarang-2025"
   },
   {
@@ -52,19 +52,5 @@ const events = [
       'Runanubandh is every emotional and close to heart event for all the ArtCircle members. It is a  farewell cum declaration program, where the current assistant and joint board members arrange the farewell for the Chief board and then the newly elected president, chief board and joint board members are declared. It is followed by the games that refresh the memories of all the ArtCircle members that the experienced during their tenure and motivates the newly elected board to do the same.The program is concluded with the oath by the newly elected president and board members and then followed by taking hand impressions of the Ex- Chief board members to preserve the memories.Overall the program is filled with all kinds of emotions and is exclusively for only ArtCircle members.',
     icon: "https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/farewell.png",
   },
-  // {
-  //   index: 5,
-  //   Name: 'DANDIYA NIGHTS 2022',
-  //   description:
-  //     'Dandiya Nights is the most-hyped program of WCE ArtCircle, which typically falls in September or October. It is celebrated at Open Air Theatre of WCE with great energy and enthusiasm. The members of Art Circle perform dandiya dance which is set beforehand. On the event day, individuals attire themselves in the traditional Gujarati fashion .Dandiyas(sticks) are also provided by the club. An energetic and colourful aura is formed with the beats of song and dance .',
-  //   icon: dandiya,
-  // },
-  // {
-  //   index: 5,
-  //   Name: 'GIM 2022',
-  //   description:
-  //     'Kalarambh is the most awaited and most celebrated event of ArtCircle. It is basically General interest meet(GIM) arranged for newly admitted first year members to get the overall idea about the ArtCircle and events arranged by ArtCircle. Kalarambh is the golden opportunity for all the teams of ArtCircle to showcase their talent and encourage the new artists to be a part of ArtCircle to enhance and polish their artistic skills by joining ArtCircle.As the name suggests its the beautiful beginning of the art for the first year members in their 4 year journey with WCE.',
-  //   icon: gim22,
-  // },
 ]
 export default events

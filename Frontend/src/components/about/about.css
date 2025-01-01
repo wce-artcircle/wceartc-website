@@ -17,48 +17,7 @@
     padding-left: 50px;
     padding-top: 80px;
     border: 2px solid #21E6C1;
-    /* &:hover {
-        filter: contrast(1.1);
-    }
-    
-    &:active {
-        filter: contrast(0.9);
-    }
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        border: 2px solid #21E6C1;
-        transition: all 1s;
-        animation: clippath 10s infinite linear;
-        border-radius: 280px 20px 280px 20px;
-    }
-    
-    &::after {
-        animation: clippath 10s infinite -5s linear;
-    } */
-
 }
-/* @keyframes clippath {
-    0%,
-    100% {
-        clip-path: inset(0 0 95% 0);
-    }
-    
-    25% {
-        clip-path: inset(0 95% 0 0);
-    }
-    50% {
-        clip-path: inset(95% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 95%);
-    }
-} */
 .about h1{
     font-size: 2.5rem;
 }
@@ -160,64 +119,8 @@
         text-align: justify;
         margin-bottom: 1rem;
     }
-    /* .heading{
-        display: flex;
-        gap: 30px;
-        padding:50px;
-    } */
 
 }
-/* @keyframes clippath {
-    0%,
-    100% {
-        clip-path: inset(0 0 95% 0);
-    }
-    
-    25% {
-        clip-path: inset(0 95% 0 0);
-    }
-    50% {
-        clip-path: inset(95% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 95%);
-    }
-}
-.about h1{
-    font-size: 2.5rem;
-}
-.about-img{
-    display: flex;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 3rem;
-}
-.about-img img{
-    padding: 0;
-    margin: 0;
-    height: 20rem;
-    width: 28rem;
-    object-fit: cover;
-}
-.about h6{
-    font-size: 1rem;
-    font-weight: 100;
-    padding-bottom: 3rem;
-}
-.about-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 30rem; */
-    /* width: 15rem;
-    text-align: justify;
-}
-.heading{
-    display: flex;
-    gap: 30px;
-    padding:50px;
-} */ 
 
 @media (min-width:350px) and (max-width:500px) {
     .main{

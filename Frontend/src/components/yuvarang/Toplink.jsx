@@ -19,20 +19,41 @@ function Toplink() {
         animation: "borderAnimation 2s infinite", // Apply animation
       }}
     >
-      <a
-        href="https://konfhub.com/yuvarang-2025"
-        target="_blank"
-        rel="noopener noreferrer"
+      <div>
+        <a
+          href="https://konfhub.com/yuvarang-2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "black",
+            fontWeight: "bold",
+          }}
+          onMouseEnter={(e) => (e.target.style.color = "blue")}
+          onMouseLeave={(e) => (e.target.style.color = "black")}
+        >
+          ✨ Register Now for Yuvarang 2025 ✨
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+        </a>
+      </div>
+      <div
         style={{
-          color: "black",
-          fontWeight: "bold",
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
         }}
-        onMouseEnter={(e) => (e.target.style.color = "blue")}
-        onMouseLeave={(e) => (e.target.style.color = "black")}
       >
-        ✨ Register Now for Yuvarang 2025 ✨
-        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-      </a>
+        <button className="rainbow-text2">
+          <a
+            href="https://drive.google.com/file/d/1QWBCFOCWWI7yo0hUFoSM9n9c0WvorNDj/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ✨View RuleBook✨{" "}
+            {/* <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> */}
+          </a>
+        </button>
+      </div>
     </div>
   );
 }
