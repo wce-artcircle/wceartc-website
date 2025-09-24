@@ -75,7 +75,7 @@ const Footer = () => {
             </p>
             <p className="details-icons">
               <FontAwesomeIcon icon={faPhone} className="spacing" />
-              <strong className="bold">Contact Us At: </strong>+91 93240 58857
+              <strong className="bold">Contact Us At: </strong>+91 9405519630
             </p>
           </div>
           <div className="policies">

@@ -5,7 +5,7 @@ const events = [
     description:
       'Yuvarang is the signature event of Art Circle. It is the only cultural mega event of WCE Sangli. The event is open to all colleges and for all trades. Art Circle tries to cover and enhance all the artforms in all the domains - drama, dance, music or content writing like poetry sketching colouring and many more. Art Circle also gives an opportunity to school going children to showcase their talent. We members of Art Circle always try to preserve the culture,promote and encourage the artforms of India and always try to do our best in this initiative',
     icon: "    https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/yuvarangf1-2025.jpg",
-    register: "https://konfhub.com/yuvarang-2025"
+    //register: "https://konfhub.com/yuvarang-2025"
   },
   {
     index: 2,
