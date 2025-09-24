@@ -4,7 +4,7 @@ import './styles.css'
 const TermsandConditions = () => {
   return (
     <div><main id="terms-and-conditions">
-    <h1 className='heading1 rainbow-text'>Terms & Conditions</h1>
+    <h1 className='heading1 warm-gradient-text'>Terms & Conditions</h1>
     <h6 className='subheading'>Welcome to WCE Art Circle, a cultural club dedicated to promoting art and creativity. By participating in our events, you agree to the following terms and conditions:</h6>
     <ol className='points'>
         <li>Respectful Conduct: Treat fellow participants, artists, and staff with respect and courtesy.</li>
@@ -20,7 +20,7 @@ const TermsandConditions = () => {
         <h2 className='subheading'>Contact:</h2>
         <p>For any inquiries or assistance, please reach out to us:</p>
         <ul className='points'>
-            <li>Phone: <a href="tel:+917757854058">+917757854058</a></li>
+            <li>Phone: <a href="tel:+919405519630">+919405519630</a></li>
             <li>Email: <a href="mailto:wceartcircle@walchandsangli.ac.in">wceartcircle@walchandsangli.ac.in</a></li>
             <li>Operational Address: Kalasadan, Academic Complex, walchand college of engineering, Vishrambagh, Sangli-416415</li>
         </ul>
