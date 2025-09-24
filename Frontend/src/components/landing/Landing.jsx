@@ -6,7 +6,7 @@ const Landing = () => {
     <>
       <div className='new'>
         <div className='landing'>
-          <h1 className='rainbow-text'>WCE ART CIRCLE</h1>
+          <h1 className='warm-gradient-text'>WCE ART CIRCLE</h1>
         </div>
       </div>
     </>

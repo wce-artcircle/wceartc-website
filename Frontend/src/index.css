@@ -38,6 +38,26 @@ body a{
       background-clip: text;
       -webkit-text-fill-color: transparent; 
 }
+      
+.warm-gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg,
+            #ffd700,
+            /* gold */
+            #ffb347,
+            /* soft orange */
+            #ff7f50
+            /* coral / peach */
+        );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* subtle glow for dark blue background */
+    text-shadow: 0 0 8px rgba(255, 200, 120, 0.6),
+        0 0 15px rgba(255, 150, 80, 0.4);
+}
 
 .rainbow-text1{font-size: 5rem; 
       font-weight: bold;
