@@ -48,6 +48,7 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
           </div>
         </div>
       </div>
+      
 
       {descp && (
         <div className="modal">
