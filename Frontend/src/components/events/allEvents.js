@@ -1,18 +1,20 @@
+
+import Revatiimg from "./GIM 2025 .jpeg";
 const events = [
   {
     index: 1,
     Name: 'Yuvarang 2026',
     description:
       'Yuvarang is the signature event of Art Circle. It is the only cultural mega event of WCE Sangli. The event is open to all colleges and for all trades. Art Circle tries to cover and enhance all the artforms in all the domains - drama, dance, music or content writing like poetry sketching colouring and many more. Art Circle also gives an opportunity to school going children to showcase their talent. We members of Art Circle always try to preserve the culture,promote and encourage the artforms of India and always try to do our best in this initiative',
-    icon: "    https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/yuvarangf1-2025.jpg",
-    //register: "https://konfhub.com/yuvarang-2025"
+    icon: "   https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/Yuvarang%202026.png",
+    register: "https://konfhub.com/yuvarang-2026"
   },
     {
     index: 2,
     Name: 'GIM 2025',
     description:
     'Kalarambh is the most awaited and most celebrated event of ArtCircle. It is basically General interest meet(GIM) arranged for newly admitted first year members to get the overall idea about the ArtCircle and events arranged by ArtCircle. Kalarambh is the golden opportunity for all the teams of ArtCircle to showcase their talent and encourage the new artists to be a part of ArtCircle to enhance and polish their artistic skills by joining ArtCircle.As the name suggests its the beautiful beginning of the art for the first year members in their 4 year journey with WCE.',
-    icon: "https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/Ganjyot.jpg",
+    icon: "https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/GIM%202025%20.jpeg",
     more: ""
   },
 

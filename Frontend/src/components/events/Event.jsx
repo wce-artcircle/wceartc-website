@@ -4,6 +4,7 @@ import "./events.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
+
 const Event = ({ idx, Name, date, description, icon, register }) => {
   const [descp, setDescp] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
