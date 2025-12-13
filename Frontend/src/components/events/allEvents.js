@@ -1,5 +1,5 @@
 
-import Revatiimg from "./GIM 2025 .jpeg";
+
 const events = [
   {
     index: 1,
@@ -13,7 +13,7 @@ const events = [
     index: 2,
     Name: 'GIM 2025',
     description:
-    'Kalarambh is the most awaited and most celebrated event of ArtCircle. It is basically General interest meet(GIM) arranged for newly admitted first year members to get the overall idea about the ArtCircle and events arranged by ArtCircle. Kalarambh is the golden opportunity for all the teams of ArtCircle to showcase their talent and encourage the new artists to be a part of ArtCircle to enhance and polish their artistic skills by joining ArtCircle.As the name suggests its the beautiful beginning of the art for the first year members in their 4 year journey with WCE.',
+      'Kalarambh is the most awaited and most celebrated event of ArtCircle. It is basically General interest meet(GIM) arranged for newly admitted first year members to get the overall idea about the ArtCircle and events arranged by ArtCircle. Kalarambh is the golden opportunity for all the teams of ArtCircle to showcase their talent and encourage the new artists to be a part of ArtCircle to enhance and polish their artistic skills by joining ArtCircle.As the name suggests its the beautiful beginning of the art for the first year members in their 4 year journey with WCE.',
     icon: "https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/GIM%202025%20.jpeg",
     more: ""
   },

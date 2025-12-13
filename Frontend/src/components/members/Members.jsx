@@ -1,7 +1,7 @@
 import React from "react";
 import "./members.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { /*faInstagram,*/ faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import PranavImg from "./Pranav_Chaudhary_P_img.jpg";
 import PranavManeImg from "./Pranav_Mane_VP_Image.jpg";
 import Revatiimg from "./Revati_Dixit_Secretary_img.jpg";
