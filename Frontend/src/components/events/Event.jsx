@@ -4,6 +4,7 @@ import "./events.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
+
 const Event = ({ idx, Name, date, description, icon, register }) => {
   const [descp, setDescp] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,6 +49,7 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
           </div>
         </div>
       </div>
+      
 
       {descp && (
         <div className="modal">
@@ -80,7 +82,7 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
                 {idx === 1 && (
                   <button className="rainbow-text2">
                     <a
-                      href="https://drive.google.com/file/d/1QWBCFOCWWI7yo0hUFoSM9n9c0WvorNDj/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1yQLUHsziSXJz3_CVuccekjxfUQsXh9qe/view?usp=drive_link"
                       target="_blank"
                       rel="noreferrer"
                     >

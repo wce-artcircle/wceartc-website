@@ -5,7 +5,7 @@ const Privacypolicy = () => {
   return (
     <div>
         <main id="privacy-policy">
-        <h1 className='heading1 rainbow-text'>Privacy Policy</h1>
+        <h1 className='heading1 warm-gradient-text'>Privacy Policy</h1>
         <h2 className='subheading'>At WCE Art Circle, we value your privacy and handle your personal information with care:</h2>
         <ul className='points'>
             <li>Information Collection: We collect data like name, contact details, and preferences to enhance your experience.</li>
@@ -18,7 +18,7 @@ const Privacypolicy = () => {
         <h2 className='subheading'>Contact:</h2>
         <p>For any inquiries or assistance, please reach out to us:</p>
         <ul className='points'>
-            <li>Phone: <a href="tel:+917757854058">+917757854058</a></li>
+            <li>Phone: <a href="tel:+919405519630">+919405519630</a></li>
             <li>Email: <a href="mailto:wceartcircle@walchandsangli.ac.in">wceartcircle@walchandsangli.ac.in</a></li>
             <li>Operational Address: Kalasadan, Academic Complex, walchand college of engineering, Vishrambagh, Sangli-416415</li>
         </ul>

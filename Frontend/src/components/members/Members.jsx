@@ -1,7 +1,11 @@
 import React from "react";
 import "./members.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { /*faInstagram,*/ faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import PranavImg from "./Pranav_Chaudhary_P_img.jpg";
+import PranavManeImg from "./Pranav_Mane_VP_Image.jpg";
+import Revatiimg from "./Revati_Dixit_Secretary_img.jpg";
+
 
 const Members = () => {
   return (
@@ -10,30 +14,20 @@ const Members = () => {
       <div className="group">
         <div className="member">
           <div className="member-image">
-            <img
-              src="https://raw.githubusercontent.com/wce-artcircle/Assets/main/heads/president.jpg"
-              alt="Anjali Patil"
-            />
+              <img src={PranavImg} alt="Pranav Chaudhari" />
           </div>
           <div className="member-info">
             <div className="member-name">
-              <h5>Anjali Patil</h5>
+              <h5>Pranav Chaudhari</h5>
               <h6>President-WCE ART CIRCLE</h6>
             </div>
             <div className="member-socials">
               <a
-                href="https://www.linkedin.com/in/anjali-patil-2ba91a280/"
+                href="https://www.linkedin.com/in/pranav-chaudhari-00316b310?"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
-              </a>
-              <a
-                href="https://www.instagram.com/nrutyanjalii/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </div>
           </div>
@@ -41,24 +35,34 @@ const Members = () => {
 
         <div className="member">
           <div className="member-image">
-            <img
-              src="https://raw.githubusercontent.com/wce-artcircle/Assets/main/heads/secretary.jpg"
-              alt="Shruti Chavan"
-            />
+            <img src={PranavManeImg} alt="Pranav Mane"/>
           </div>
           <div className="member-info">
             <div className="member-name">
-              <h5>Shruti Chavan</h5>
-              <h6>Secretary-WCE ART CIRCLE</h6>
+              <h5>Pranav Mane</h5>
+              <h6>Vice-President-WCE ART CIRCLE</h6>
             </div>
             <div className="member-socials">
               <a
-                href="https://www.linkedin.com/in/shruti-chavan-4a3b32272/"
+                href="https://www.linkedin.com/in/pranav-mane-5b16a7256"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
+            </div>
+          </div>
+        </div>
+
+
+          <div className="member">
+          <div className="member-image">
+          <img src={Revatiimg} alt="Revati Dixit"/>
+          </div>
+          <div className="member-info">
+            <div className="member-name">
+              <h5>Revati Dixit</h5>
+              <h6>Secretary-WCE ART CIRCLE</h6>
             </div>
           </div>
         </div>
