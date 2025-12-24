@@ -99,3 +99,18 @@ img{
         color: var(--color-primary);
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+
+.sections a {
+    transition: all 0.3s ease;
+}
+
+.sections a:hover {
+    transform: translateY(-2px);
+}
+
+.sections a.active {
+    transition: all 0.3s ease;
+}
