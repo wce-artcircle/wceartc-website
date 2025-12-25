@@ -7,7 +7,7 @@ const About = () => {
     <div id="about">
       <div className="main">
         <div className="about">
-          <h2 className="rainbow-text">About Us</h2>
+          <h2 className="warm-gradient-text">About Us</h2>
           <div className="heading">
             <div className="about-img">
               <img src={ABTIMAGE} alt="" />
