@@ -17,6 +17,7 @@ import PhotographyTeam from "./components/teamspages/PhotographyTeam";
 import ContentTeam from "./components/teamspages/ContentTeam";
 import DesignTeam from "./components/teamspages/Art-DecoTeam";
 // import MainPage from './components/yuvarang/MainPage';
+
 const App = () => {
   return (
     <>

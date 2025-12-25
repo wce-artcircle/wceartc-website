@@ -26,9 +26,21 @@ body{
     font-size: 1.2rem;
     font-weight: 600;
 }
-.sections a:hover{
-    color: var(--color-primary);
+.sections a:hover {
+    background: linear-gradient(90deg,
+            #ffd700,
+            #ffb347,
+            #ff7f50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 8px rgba(255, 200, 120, 0.6),
+        0 0 15px rgba(255, 150, 80, 0.4);
+
+    transform: translateY(-2px);
 }
+
 .logo{
     height: 3rem;
     display: flex;
@@ -98,4 +110,19 @@ img{
     .sections a:hover{
         color: var(--color-primary);
     }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.sections a {
+    transition: all 0.3s ease;
+}
+
+.sections a:hover {
+    transform: translateY(-2px);
+}
+
+.sections a.active {
+    transition: all 0.3s ease;
 }

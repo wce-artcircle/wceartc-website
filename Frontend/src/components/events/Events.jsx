@@ -6,7 +6,7 @@ import Event from './Event'
 const Events = () => {
   return (
     <div id='events'>
-      <h2 className='rainbow-text'>Recent Events</h2>
+      <h2 className='warm-gradient-text'>Recent Events</h2>
       <div className='events-container'>
         {events.map((event, index) => {
           return (

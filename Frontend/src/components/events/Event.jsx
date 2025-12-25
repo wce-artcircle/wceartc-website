@@ -82,7 +82,7 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
                 {idx === 1 && (
                   <button className="rainbow-text2">
                     <a
-                      href="https://drive.google.com/file/d/1yQLUHsziSXJz3_CVuccekjxfUQsXh9qe/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
                       target="_blank"
                       rel="noreferrer"
                     >
