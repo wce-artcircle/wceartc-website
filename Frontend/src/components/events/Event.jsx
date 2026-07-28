@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./events.css";
-import "./events.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-
-const Event = ({ idx, Name, date, description, icon, register }) => {
+const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => {
   const [descp, setDescp] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => {
@@ -32,15 +30,24 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
     <div>
       <div className="event">
         <div className="event-image">
-          <img src={icon} alt="" />
+          <img
+            src={icon}
+            alt=""
+            className={comingSoon ? "coming-soon-blur" : ""}
+          />
+          {comingSoon && (
+            <span className="coming-soon-badge">Coming Soon</span>
+          )}
         </div>
         <div className="event-info">
           <h1 className="rainbow-text">{Name}</h1>
           <p>{truncatedDescription}</p>
           <div className="buttons">
-            <button className="btn" onClick={() => setDescp(true)}>
-              Read More
-            </button>
+            {!comingSoon && (
+              <button className="btn" onClick={() => setDescp(true)}>
+                Read More
+              </button>
+            )}
             {register && (
               <a href={register} target="_blank" rel="noreferrer">
                 <button className="btn">Register Now</button>
@@ -49,7 +56,6 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
           </div>
         </div>
       </div>
-      
 
       {descp && (
         <div className="modal">
@@ -79,13 +85,13 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
                 />
               </div>
               <div className="event-info">
-                {idx === 1 && (
+                {idx === "Yuvarang 2026" && (
                   <button className="rainbow-text2">
-                    <a
+                    
                       href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
                       target="_blank"
                       rel="noreferrer"
-                    >
+                   <a >
                       ✨ View RuleBook ✨{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
