@@ -7,14 +7,14 @@ const events = [
     index: 10,
     Name: 'Kala Spotlight (Art Circle Day)',
     description:
-      'Kala Spotlight celebrates Art Circle Day, putting the spotlight on the artists and artforms that define the club. Replace this with the real description before merging.',
+      "Kala Spotlight is the signature celebration of WCE Art Circle Day, dedicated to honoring the passion, creativity, and talent of our artists. Through mesmerizing performances, inspiring exhibitions, and vibrant cultural expressions, the event shines a spotlight on every art form that defines our club, celebrating the spirit of imagination, collaboration, and artistic excellence.",
     icon: kalaSpotlight,
   },
   {
     index: 11,
     Name: 'Thai Thai Vithai (Ashadhi Ekadashi)',
     description:
-      'Thai Thai Vithai marks Ashadhi Ekadashi with a celebration of traditional dance and devotion. Replace this with the real description before merging.',
+      "Thai Thai Vithai is a vibrant celebration inspired by the sacred occasion of Ashadhi Ekadashi, where art becomes an expression of devotion. Through mesmerizing dance, soulful music, and captivating cultural performances, the event honors Maharashtra's rich spiritual heritage while inspiring creativity, unity, and a deep appreciation for our timeless traditions.",
     icon: thaiThaiVithai,
   },
   {
