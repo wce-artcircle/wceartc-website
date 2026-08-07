@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./events.css";
-import "./events.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-
-const Event = ({ idx, Name, date, description, icon, register }) => {
+const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => {
   const [descp, setDescp] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -32,24 +31,31 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
     <div>
       <div className="event">
         <div className="event-image">
-          <img src={icon} alt="" />
+          <img
+            src={icon}
+            alt=""
+            className={comingSoon ? "coming-soon-blur" : ""}
+          />
+          {comingSoon && <span className="coming-soon-badge">Coming Soon</span>}
         </div>
+
         <div className="event-info">
           <h1 className="rainbow-text">{Name}</h1>
           <p>{truncatedDescription}</p>
           <div className="buttons">
-            <button className="btn" onClick={() => setDescp(true)}>
-              Read More
-            </button>
+            {!comingSoon && (
+              <button className="btn" onClick={() => setDescp(true)}>
+                Read More
+              </button>
+            )}
             {register && (
-              <a href={register} target="_blank" rel="noreferrer">
-                <button className="btn">Register Now</button>
+              <a href={register} target="_blank" rel="noreferrer" className="btn">
+                Register Now
               </a>
             )}
           </div>
         </div>
       </div>
-      
 
       {descp && (
         <div className="modal">
@@ -57,6 +63,7 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
             <span className="close" onClick={() => setDescp(false)}>
               &times;
             </span>
+
             <div
               className="event-descp"
               style={{
@@ -78,19 +85,21 @@ const Event = ({ idx, Name, date, description, icon, register }) => {
                   style={{ borderRadius: "0.7rem" }}
                 />
               </div>
+
               <div className="event-info">
                 {idx === 1 && (
-                  <button className="rainbow-text2">
-                    <a
-                      href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      ✨ View RuleBook ✨{" "}
-                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
-                  </button>
+                  <a
+                    href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rainbow-text2"
+                    style={{ textDecoration: "none" }}
+                  >
+                    ✨ View RuleBook ✨{" "}
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  </a>
                 )}
+
                 <h1 className="rainbow-text1" style={{ marginTop: "0.8rem" }}>
                   {Name}
                 </h1>

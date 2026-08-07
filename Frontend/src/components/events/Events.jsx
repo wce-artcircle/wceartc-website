@@ -18,6 +18,7 @@ const Events = () => {
               description={event.description}
               icon={event.icon}
               register={event.register}
+              comingSoon={event.comingSoon}
             />
           )
         })}

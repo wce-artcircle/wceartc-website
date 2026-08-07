@@ -1,6 +1,54 @@
-
+import kalaSpotlight from "../../assets/events/kala-spotlight.jpeg";
+import thaiThaiVithai from "../../assets/events/thai-thai-vithai.jpeg";
+import comingSoonWallpaper from "../../assets/responsive_wallpaper.png";
 
 const events = [
+  {
+    index: 10,
+    Name: 'Kala Spotlight (Art Circle Day)',
+    description:
+      'Kala Spotlight celebrates Art Circle Day, putting the spotlight on the artists and artforms that define the club. Replace this with the real description before merging.',
+    icon: kalaSpotlight,
+  },
+  {
+    index: 11,
+    Name: 'Thai Thai Vithai (Ashadhi Ekadashi)',
+    description:
+      'Thai Thai Vithai marks Ashadhi Ekadashi with a celebration of traditional dance and devotion. Replace this with the real description before merging.',
+    icon: thaiThaiVithai,
+  },
+  {
+    index: 12,
+    Name: 'Kalarambh (GIM)',
+    description:
+      'Kalarambh is the most awaited and celebrated event of Art Circle. It is a General Interest Meet (GIM) arranged for newly admitted first-year members to get a complete picture of Art Circle and the events it organizes throughout the year. Kalarambh gives every team in Art Circle the chance to showcase its talent and inspire new artists to join and grow their skills. As the name suggests, it marks the beautiful beginning of an artistic journey for first-year members over their four years at WCE.',
+    icon: comingSoonWallpaper,
+    comingSoon: true,
+  },
+  {
+    index: 13,
+    Name: 'Roo-Ba-Roo (Dandiya Night)',
+    description:
+      'Roo-Ba-Roo is one of the most awaited nights of the year for WCE Art Circle, celebrated with the energy and enthusiasm of Navratri. Held at the Open Air Theatre, members perform choreographed dandiya dances while attendees dress in traditional Gujarati attire. Dandiyas are provided by the club, and the evening comes alive with music, dance, and colour.',
+    icon: comingSoonWallpaper,
+    comingSoon: true,
+  },
+  {
+    index: 14,
+    Name: 'Deepotsav',
+    description:
+      'Deepotsav is Art Circle\u2019s celebration of light and festivity, bringing members together to mark the spirit of the season.',
+    icon: comingSoonWallpaper,
+    comingSoon: true,
+  },
+  {
+    index: 15,
+    Name: 'Yuvarang 2027',
+    description:
+      'Yuvarang is the signature event of Art Circle and the only cultural mega-event of WCE Sangli, open to all colleges and every trade. Art Circle brings together every artform under one roof — drama, dance, music, and content writing including poetry and sketching — and even gives school-going children a stage to showcase their talent. Every year, Art Circle works to preserve, promote, and celebrate the artforms of India, and Yuvarang 2027 continues that tradition.',
+    icon: comingSoonWallpaper,
+    comingSoon: true,
+  },
   {
     index: 1,
     Name: 'Yuvarang 2026',
