@@ -6,6 +6,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => {
   const [descp, setDescp] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -35,10 +36,9 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
             alt=""
             className={comingSoon ? "coming-soon-blur" : ""}
           />
-          {comingSoon && (
-            <span className="coming-soon-badge">Coming Soon</span>
-          )}
+          {comingSoon && <span className="coming-soon-badge">Coming Soon</span>}
         </div>
+
         <div className="event-info">
           <h1 className="rainbow-text">{Name}</h1>
           <p>{truncatedDescription}</p>
@@ -49,8 +49,8 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
               </button>
             )}
             {register && (
-              <a href={register} target="_blank" rel="noreferrer">
-                <button className="btn">Register Now</button>
+              <a href={register} target="_blank" rel="noreferrer" className="btn">
+                Register Now
               </a>
             )}
           </div>
@@ -63,6 +63,7 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
             <span className="close" onClick={() => setDescp(false)}>
               &times;
             </span>
+
             <div
               className="event-descp"
               style={{
@@ -84,19 +85,21 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
                   style={{ borderRadius: "0.7rem" }}
                 />
               </div>
+
               <div className="event-info">
-                {idx === "Yuvarang 2026" && (
-                  <button className="rainbow-text2">
-                    
-                      href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
-                      target="_blank"
-                      rel="noreferrer"
-                   <a >
-                      ✨ View RuleBook ✨{" "}
-                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
-                  </button>
+                {idx === 1 && (
+                  <a
+                    href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rainbow-text2"
+                    style={{ textDecoration: "none" }}
+                  >
+                    ✨ View RuleBook ✨{" "}
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  </a>
                 )}
+
                 <h1 className="rainbow-text1" style={{ marginTop: "0.8rem" }}>
                   {Name}
                 </h1>
