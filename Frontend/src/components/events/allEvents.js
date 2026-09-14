@@ -1,6 +1,7 @@
 import kalaSpotlight from "../../assets/events/kala-spotlight.jpeg";
 import thaiThaiVithai from "../../assets/events/thai-thai-vithai.jpeg";
 import comingSoonWallpaper from "../../assets/responsive_wallpaper.png";
+import kalarambh2026Poster from "../../assets/events/kalarambh-2026-poster.png";
 
 const events = [
   {
@@ -22,8 +23,8 @@ const events = [
     Name: 'Kalarambh (GIM)',
     description:
       'Kalarambh is the most awaited and celebrated event of Art Circle. It is a General Interest Meet (GIM) arranged for newly admitted first-year members to get a complete picture of Art Circle and the events it organizes throughout the year. Kalarambh gives every team in Art Circle the chance to showcase its talent and inspire new artists to join and grow their skills. As the name suggests, it marks the beautiful beginning of an artistic journey for first-year members over their four years at WCE.',
-    icon: comingSoonWallpaper,
-    comingSoon: true,
+     icon: "   https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/Yuvarang%202026.png",
+    register: "https://konfhub.com/kalarambh2k26-cultural-program"
   },
   {
     index: 13,
@@ -48,6 +49,14 @@ const events = [
       'Yuvarang is the signature event of Art Circle and the only cultural mega-event of WCE Sangli, open to all colleges and every trade. Art Circle brings together every artform under one roof — drama, dance, music, and content writing including poetry and sketching — and even gives school-going children a stage to showcase their talent. Every year, Art Circle works to preserve, promote, and celebrate the artforms of India, and Yuvarang 2027 continues that tradition.',
     icon: comingSoonWallpaper,
     comingSoon: true,
+  },
+  {
+    index: 16,
+    Name: 'Kalarambh 2026 (कलारंभ २०२६)',
+    description:
+      'नांदी नवपर्वाची...',
+    icon: kalarambh2026Poster,
+    register: "https://konfhub.com/kalarambh2k26-cultural-program",
   },
   {
     index: 1,

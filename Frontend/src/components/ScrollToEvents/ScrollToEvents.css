@@ -57,6 +57,14 @@
     text-align: center;
 }
 
+.popup-poster {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
 .popup-icon {
     font-size: 4rem;
     margin-bottom: 20px;

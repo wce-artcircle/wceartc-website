@@ -49,7 +49,7 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
               </button>
             )}
             {register && (
-              <a href={register} target="_blank" rel="noreferrer" className="btn">
+              <a href={register} target="_blank" rel="noopener noreferrer" className="btn">
                 Register Now
               </a>
             )}
@@ -91,7 +91,7 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
                   <a
                     href="https://drive.google.com/file/d/1pX8rMiDc1Qv_LcgVmfSG9_f9RC5xCy0g/view?usp=drivesdk"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="rainbow-text2"
                     style={{ textDecoration: "none" }}
                   >
