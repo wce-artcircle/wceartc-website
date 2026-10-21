@@ -3,7 +3,7 @@ import "./events.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => {
+const Event = ({ idx, Name, date, description, icon, register, comingSoon, status }) => {
   const [descp, setDescp] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,12 +31,19 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
     <div>
       <div className="event">
         <div className="event-image">
-          <img
-            src={icon}
-            alt=""
-            className={comingSoon ? "coming-soon-blur" : ""}
-          />
-          {comingSoon && <span className="coming-soon-badge">Coming Soon</span>}
+          <div className="event-image-frame">
+            <img
+              src={icon}
+              alt=""
+              className={comingSoon ? "coming-soon-blur" : ""}
+            />
+            {comingSoon && <span className="coming-soon-badge">Coming Soon</span>}
+            {status === "live" && (
+              <span className="event-status-badge live">
+                Live / Registrations Open
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="event-info">
@@ -48,7 +55,7 @@ const Event = ({ idx, Name, date, description, icon, register, comingSoon }) => 
                 Read More
               </button>
             )}
-            {register && (
+            {register && status === "live" && (
               <a href={register} target="_blank" rel="noopener noreferrer" className="btn">
                 Register Now
               </a>

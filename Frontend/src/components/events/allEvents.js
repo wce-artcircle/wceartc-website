@@ -2,8 +2,42 @@ import kalaSpotlight from "../../assets/events/kala-spotlight.jpeg";
 import thaiThaiVithai from "../../assets/events/thai-thai-vithai.jpeg";
 import comingSoonWallpaper from "../../assets/responsive_wallpaper.png";
 import kalarambh2026Poster from "../../assets/events/kalarambh-2026-poster.png";
+import tichiShappath from "../../assets/events/tichi_shappath.jpeg";
+import rooBaRoo2026 from "../../assets/events/roo-ba-roo_26-27.jpeg";
+
+export const resolveEventStatus = (event) => {
+  if (event.status) return event.status;
+  if (event.comingSoon) return "upcoming";
+  return "past";
+};
 
 const events = [
+  {
+    index: 17,
+    Name: 'Tichi Shappath (टिचं शप्पथ)',
+    tagline: 'कविता, गझला आणि बरंच काही',
+    date: '24 October 2026 (Saturday), 5:00 PM',
+    venue: 'Tilak Hall, Walchand College of Engineering, Sangli',
+    entry: 'Free entry (विनामूल्य प्रवेश), limited seats, first come first served',
+    contact: 'Ayush 7447781876, Parth 8432530509',
+    description:
+      'Tichi Shappath is an evening of कविता, गझला आणि बरंच काही — poetry, ghazals and much more, presented by WCE Art Circle at Tilak Hall, Walchand College of Engineering, Sangli on 24 October 2026 at 5:00 PM. Entry is free (विनामूल्य प्रवेश) with limited seats on a first come, first served basis, so register early to reserve your spot.',
+    icon: tichiShappath,
+    register: "https://konfhub.com/tichi-shappath",
+    status: "live",
+  },
+  {
+    index: 18,
+    Name: 'Roo-Ba-Roo (aka Dandiya Night 2026)',
+    date: '15 October 2026, 5:30 PM - 9:00 PM',
+    venue: 'OAT, Walchand College of Engineering, Sangli',
+    entry: 'Free entry to all (ID card required)',
+    presentedBy: 'WCE Art Circle with Social Media Club',
+    description:
+      'Roo-Ba-Roo (aka Dandiya Night 2026) was one of the most awaited nights of the year for WCE Art Circle, celebrated with the energy and enthusiasm of Navratri on 15 October 2026, 5:30 PM - 9:00 PM at the Open Air Theatre (OAT), Walchand College of Engineering, Sangli. Presented by WCE Art Circle with Social Media Club, members performed choreographed dandiya dances while attendees dressed in traditional Gujarati attire, with dandiyas provided by the club. Free entry to all (ID card required).',
+    icon: rooBaRoo2026,
+    status: "past",
+  },
   {
     index: 10,
     Name: 'Kala Spotlight (Art Circle Day)',
@@ -24,15 +58,7 @@ const events = [
     description:
       'Kalarambh is the most awaited and celebrated event of Art Circle. It is a General Interest Meet (GIM) arranged for newly admitted first-year members to get a complete picture of Art Circle and the events it organizes throughout the year. Kalarambh gives every team in Art Circle the chance to showcase its talent and inspire new artists to join and grow their skills. As the name suggests, it marks the beautiful beginning of an artistic journey for first-year members over their four years at WCE.',
      icon: "   https://cdn.statically.io/gh/wce-artcircle/Assets/main/events/Yuvarang%202026.png",
-    register: "https://konfhub.com/kalarambh2k26-cultural-program"
-  },
-  {
-    index: 13,
-    Name: 'Roo-Ba-Roo (Dandiya Night)',
-    description:
-      'Roo-Ba-Roo is one of the most awaited nights of the year for WCE Art Circle, celebrated with the energy and enthusiasm of Navratri. Held at the Open Air Theatre, members perform choreographed dandiya dances while attendees dress in traditional Gujarati attire. Dandiyas are provided by the club, and the evening comes alive with music, dance, and colour.',
-    icon: comingSoonWallpaper,
-    comingSoon: true,
+    status: "past",
   },
   {
     index: 14,
@@ -56,7 +82,7 @@ const events = [
     description:
       'नांदी नवपर्वाची...',
     icon: kalarambh2026Poster,
-    register: "https://konfhub.com/kalarambh2k26-cultural-program",
+    status: "past",
   },
   {
     index: 1,

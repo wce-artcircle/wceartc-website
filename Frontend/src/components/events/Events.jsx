@@ -1,14 +1,20 @@
 import React from 'react'
 import './events.css'
-import events from './allEvents'
+import events, { resolveEventStatus } from './allEvents'
 import Event from './Event'
 
+const statusOrder = { live: 0, upcoming: 1, past: 2 }
+
 const Events = () => {
+  const sortedEvents = [...events].sort(
+    (a, b) => statusOrder[resolveEventStatus(a)] - statusOrder[resolveEventStatus(b)]
+  )
+
   return (
     <div id='events'>
       <h2 className='warm-gradient-text'>Recent Events</h2>
       <div className='events-container'>
-        {events.map((event, index) => {
+        {sortedEvents.map((event, index) => {
           return (
             <Event
               key={index}
@@ -19,6 +25,7 @@ const Events = () => {
               icon={event.icon}
               register={event.register}
               comingSoon={event.comingSoon}
+              status={resolveEventStatus(event)}
             />
           )
         })}
