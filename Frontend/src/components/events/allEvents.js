@@ -14,7 +14,7 @@ export const resolveEventStatus = (event) => {
 const events = [
   {
     index: 17,
-    Name: 'Tichi Shappath (टिचं शप्पथ)',
+    Name: 'Tichi Shappath (तिची शप्पथ)',
     tagline: 'कविता, गझला आणि बरंच काही',
     date: '24 October 2026 (Saturday), 5:00 PM',
     venue: 'Tilak Hall, Walchand College of Engineering, Sangli',
