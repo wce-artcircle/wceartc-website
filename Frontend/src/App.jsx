@@ -1,57 +1,107 @@
-import React from "react";
-import {
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
-import Main from "./Main";
-// import Admin from "./components/admin/Admin";
-import TermsandConditions from "./components/policies/TermsandConditions";
-import ServicePricing from "./components/policies/ServicePricing";
-import PrivacyPolicy from "./components/policies/Privacypolicy";
-import CancellationandRefundPolicy from "./components/policies/CancelandRefund";
-import DanceTeam from "./components/teamspages/DanceTeam";
-import DramaTeam from "./components/teamspages/DramaTeam";
-import MusicTeam from "./components/teamspages/MusicTeam";
-import PhotographyTeam from "./components/teamspages/PhotographyTeam";
-import ContentTeam from "./components/teamspages/ContentTeam";
-import DesignTeam from "./components/teamspages/Art-DecoTeam";
-// import MainPage from './components/yuvarang/MainPage';
+import { useCallback, useEffect, useState } from 'react'
+import { AnimatePresence, useReducedMotion } from 'framer-motion'
+import Starfield from './components/Starfield'
+import Intro from './components/Intro'
+import RegisterModal from './components/RegisterModal'
+import DisciplineModal from './components/DisciplineModal'
+import EventDetailsModal from './components/EventDetailsModal'
+import PolicyModal from './components/PolicyModal'
+import { Navbar, Hero, About, Disciplines, Events, Leaders, CTA, Footer } from './components/Sections'
+import { events } from './data/siteData'
 
-const App = () => {
+export default function App() {
+  const reduced = useReducedMotion()
+  // Always start with intro/game active on reload, unless skipped in the current view
+  const [intro, setIntro] = useState(true)
+
+  const [registerModal, setRegisterModal] = useState(null)
+  const [selectedDiscipline, setSelectedDiscipline] = useState(null)
+  const [selectedEvent, setSelectedEvent] = useState(null)
+  const [selectedPolicy, setSelectedPolicy] = useState(null)
+
+  const live = events.find((e) => e.status === 'live')
+
+  const done = useCallback(() => {
+    setIntro(false)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = intro ? 'hidden' : ''
+  }, [intro])
+
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          {/* <Route exact path="/adminverification" element={<Admin />} /> */}
-          <Route
-            exact
-            path="/terms-and-conditions"
-            element={<TermsandConditions />}
-          />
-          <Route exact path="/service-pricing" element={<ServicePricing />} />
-          <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route
-            exact
-            path="/cancellation-and-refund-policy"
-            element={<CancellationandRefundPolicy />}
-          />
-          <Route exact path="/dance-team" element={<DanceTeam />} />
-          <Route exact path="/drama-team" element={<DramaTeam />} />
-          <Route exact path="/music-team" element={<MusicTeam />} />
-          <Route
-            exact
-            path="/photography-editing-team"
-            element={<PhotographyTeam />}
-          />
-          <Route exact path="/content-team" element={<ContentTeam />} />
-          <Route exact path="/art-deco-team" element={<DesignTeam />} />
-          {/* <Route exact path="/yuvarang2024" element={<MainPage />} /> */}
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
-};
+      <Starfield reduced={reduced} />
 
-export default App;
+      <AnimatePresence>
+        {intro && <Intro key="intro" onDone={done} reduced={reduced} />}
+      </AnimatePresence>
+
+      {!intro && (
+        <>
+          <Navbar live={!!live} onRegisterLive={() => setRegisterModal(live)} />
+          <main>
+            <Hero reduced={reduced} />
+            <About />
+            <Disciplines onSelectDiscipline={setSelectedDiscipline} />
+            <Events
+              onRegister={setRegisterModal}
+              onSelectEvent={setSelectedEvent}
+            />
+            <Leaders />
+            <CTA />
+          </main>
+          <Footer onSelectPolicy={setSelectedPolicy} />
+          <button
+            className="replay"
+            onClick={() => setIntro(true)}
+            aria-label="Replay intro & mini-game"
+          >
+            ↻ Play Game / Intro
+          </button>
+        </>
+      )}
+
+      {/* Interactive modals */}
+      <AnimatePresence>
+        {registerModal && (
+          <RegisterModal
+            event={registerModal}
+            onClose={() => setRegisterModal(null)}
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {selectedDiscipline && (
+          <DisciplineModal
+            discipline={selectedDiscipline}
+            onClose={() => setSelectedDiscipline(null)}
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {selectedEvent && (
+          <EventDetailsModal
+            event={selectedEvent}
+            onClose={() => setSelectedEvent(null)}
+            onRegister={(ev) => {
+              setSelectedEvent(null)
+              setRegisterModal(ev)
+            }}
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {selectedPolicy && (
+          <PolicyModal
+            policyKey={selectedPolicy}
+            onClose={() => setSelectedPolicy(null)}
+          />
+        )}
+      </AnimatePresence>
+    </>
+  )
+}

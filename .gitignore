@@ -1,0 +1,10 @@
+# local review stash — nothing here should ever be committed
+_removed_review/
+
+# logs & temp
+*.log
+Thumbs.db
+
+# dependencies / build output safety net (also ignored inside Frontend/)
+node_modules/
+dist/
