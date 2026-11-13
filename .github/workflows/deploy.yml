@@ -29,9 +29,19 @@ jobs:
         working-directory: ./Frontend
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (gh-pages branch)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./Frontend/build
           publish_branch: gh-pages
+
+      # Pages source is currently "main / (root)" and changing it needs admin
+      # access, so also publish the build output to the root of main.
+      # Pushes made with GITHUB_TOKEN do not re-trigger workflows (no loop).
+      - name: Deploy build to Pages source (main root)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Frontend/build
+          publish_branch: main
