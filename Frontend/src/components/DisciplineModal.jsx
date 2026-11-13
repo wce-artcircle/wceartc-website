@@ -36,24 +36,24 @@ export default function DisciplineModal({ discipline, onClose }) {
             ✕
           </button>
 
-          <span className="kicker" style={{ color: discipline.accent, letterSpacing: '0.25em' }}>
+          <span className="kicker" style={{ color: discipline.accent, letterSpacing: '0.18em' }}>
             WCE ART CIRCLE · ARTFORM WING
           </span>
-          <h2 className="grad" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', marginTop: '0.2rem' }}>
+          <h2 className="grad" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginTop: '0.2rem' }}>
             {discipline.name}
           </h2>
-          <p style={{ fontStyle: 'italic', color: discipline.accent, margin: '0.2rem 0 1rem' }}>
+          <p style={{ fontStyle: 'italic', color: discipline.accent, margin: '0.2rem 0 1rem', fontSize: 'var(--fs-body)' }}>
             "{discipline.headline}"
           </p>
 
-          <p style={{ fontSize: '0.92rem', lineHeight: '1.7', color: 'var(--text)', whiteSpace: 'pre-line' }}>
+          <p style={{ fontSize: 'var(--fs-body)', lineHeight: '1.7', color: 'var(--text)', whiteSpace: 'pre-line' }}>
             {discipline.description || discipline.blurb}
           </p>
 
           {/* Exhibition / Gallery */}
           {discipline.artforms && discipline.artforms.length > 0 && (
             <div style={{ marginTop: '2rem' }}>
-              <h3 style={{ fontSize: '1.3rem', color: '#fff', borderBottom: '1px solid var(--line)', paddingBottom: '0.5rem' }}>
+              <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#fff', borderBottom: '1px solid var(--line)', paddingBottom: '0.5rem' }}>
                 Exhibition Gallery & Performances
               </h3>
 

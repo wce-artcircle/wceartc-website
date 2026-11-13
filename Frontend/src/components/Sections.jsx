@@ -396,7 +396,7 @@ export function Footer({ onSelectPolicy }) {
         {/* Column 1: Logo */}
         <div className="footer-brand-col">
           <img src={assets.favi} alt="WCE Art Circle Emblem" className="footer-logo-img" />
-          <span style={{ fontFamily: 'Cinzel, serif', fontWeight: 'bold', fontSize: '1rem', color: '#fff' }}>
+          <span style={{ fontFamily: 'Cinzel, serif', fontWeight: 600, fontSize: '0.95rem', color: '#fff' }}>
             WCE ART CIRCLE
           </span>
           <small className="muted" style={{ fontSize: '0.72rem' }}>

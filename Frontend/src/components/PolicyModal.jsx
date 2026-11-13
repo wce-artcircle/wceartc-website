@@ -38,23 +38,23 @@ export default function PolicyModal({ policyKey, onClose }) {
         <span className="kicker" style={{ color: 'var(--teal)', letterSpacing: '0.25em' }}>
           WCE ART CIRCLE · LEGAL & POLICIES
         </span>
-        <h2 className="grad" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.3rem)', margin: '0.2rem 0 1rem' }}>
-          {p.title}
+        <h2 className="grad" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, margin: '0.2rem 0 1rem' }}>
+          {content.title}
         </h2>
 
-        <p style={{ fontSize: '0.95rem', color: 'var(--text)', marginBottom: '1.2rem' }}>
-          {p.intro}
+        <p style={{ fontSize: 'var(--fs-body)', color: 'var(--text)', marginBottom: '1.2rem' }}>
+          {content.intro}
         </p>
 
-        <ul style={{ paddingLeft: '1.2rem', display: 'grid', gap: '0.8rem', color: 'var(--text)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+        <ul style={{ paddingLeft: '1.2rem', display: 'grid', gap: '0.8rem', color: 'var(--text)', fontSize: 'var(--fs-body)', lineHeight: '1.7' }}>
           {p.points.map((pt, i) => (
             <li key={i}>{pt}</li>
           ))}
         </ul>
 
         {p.contact && (
-          <div style={{ marginTop: '1.8rem', background: 'rgba(5, 8, 22, 0.5)', border: '1px solid var(--line)', borderRadius: '14px', padding: '1rem', fontSize: '0.85rem' }}>
-            <h4 style={{ color: 'var(--gold)', marginBottom: '0.5rem', fontSize: '0.95rem' }}>Official Contact:</h4>
+          <div style={{ marginTop: '1.8rem', background: 'rgba(5, 8, 22, 0.5)', border: '1px solid var(--line)', borderRadius: '14px', padding: '1rem', fontSize: 'var(--fs-small)' }}>
+            <h4 style={{ color: 'var(--gold)', marginBottom: '0.5rem', fontSize: 'var(--fs-body)' }}>Official Contact:</h4>
             <p style={{ margin: '0 0 0.3rem' }}>
               📞 Phone: <a href={`tel:${p.contact.phone}`}>{p.contact.phone}</a>
             </p>

@@ -240,7 +240,7 @@ export default function RegisterModal({ event, onClose }) {
                 value={otpInput}
                 onChange={(e) => setOtpInput(e.target.value)}
                 placeholder="Enter OTP"
-                style={{ textAlign: 'center', fontSize: '1.2rem', letterSpacing: '0.3em' }}
+                style={{ textAlign: 'center', fontSize: '1.1rem', letterSpacing: '0.2em' }}
               />
               {err && <p style={{ color: '#ff6b6b', fontSize: '0.8rem' }}>{err}</p>}
               <button className="btn btn-gold" disabled={loading} style={{ justifyContent: 'center' }}>
@@ -263,7 +263,7 @@ export default function RegisterModal({ event, onClose }) {
               animate={{ opacity: 1, scale: 1 }}
               style={{ textAlign: 'center', padding: '1rem 0' }}
             >
-              <p className="ok" style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--gold)', margin: '0 0 0.5rem' }}>
+              <p className="ok" style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--gold)', margin: '0 0 0.5rem' }}>
                 ✦ Registration Confirmed! ✦
               </p>
               <p style={{ fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 1rem' }}>

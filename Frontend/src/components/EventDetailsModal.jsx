@@ -77,37 +77,37 @@ export default function EventDetailsModal({ event, onClose, onRegister }) {
             <span className={'badge ' + event.status}>
               {event.status === 'live' ? '● LIVE NOW' : '✓ COMPLETED EVENT'}
             </span>
-            <small style={{ color: 'var(--teal)', letterSpacing: '0.25em', textTransform: 'uppercase', display: 'block', margin: '0.4rem 0' }}>
+            <small style={{ color: 'var(--teal)', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', margin: '0.4rem 0', fontSize: 'var(--fs-eyebrow)' }}>
               {event.tag}
             </small>
-            <h2 className="grad" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)', margin: '0 0 0.4rem' }}>
+            <h2 className="grad" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, margin: '0 0 0.4rem' }}>
               {event.title}
             </h2>
             {event.subtitle && (
-              <p style={{ fontStyle: 'italic', color: 'var(--muted)', fontSize: '0.95rem', margin: '0 0 1rem' }}>
+              <p style={{ fontStyle: 'italic', color: 'var(--muted)', fontSize: 'var(--fs-body)', margin: '0 0 1rem' }}>
                 {event.subtitle}
               </p>
             )}
 
             <div style={{ background: 'rgba(5, 8, 22, 0.5)', border: '1px solid var(--line)', borderRadius: '14px', padding: '1rem', margin: '1rem 0' }}>
-              <p style={{ margin: '0 0 0.4rem', fontSize: '0.85rem' }}>
+              <p style={{ margin: '0 0 0.4rem', fontSize: 'var(--fs-small)' }}>
                 <b>📅 Date:</b> {event.date}
               </p>
-              <p style={{ margin: '0 0 0.4rem', fontSize: '0.85rem' }}>
+              <p style={{ margin: '0 0 0.4rem', fontSize: 'var(--fs-small)' }}>
                 <b>📍 Venue:</b> {event.venue}
               </p>
               {event.entry && (
-                <p style={{ margin: '0 0 0.4rem', fontSize: '0.85rem' }}>
+                <p style={{ margin: '0 0 0.4rem', fontSize: 'var(--fs-small)' }}>
                   <b>🎟 Entry:</b> {event.entry}
                 </p>
               )}
               {event.contact && (
-                <p style={{ margin: '0 0 0.4rem', fontSize: '0.85rem' }}>
+                <p style={{ margin: '0 0 0.4rem', fontSize: 'var(--fs-small)' }}>
                   <b>📞 Contact:</b> {event.contact}
                 </p>
               )}
               {event.presentedBy && (
-                <p style={{ margin: '0', fontSize: '0.85rem' }}>
+                <p style={{ margin: '0', fontSize: 'var(--fs-small)' }}>
                   <b>🤝 Presented By:</b> {event.presentedBy}
                 </p>
               )}
@@ -128,10 +128,10 @@ export default function EventDetailsModal({ event, onClose, onRegister }) {
               </div>
             )}
 
-            <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.2rem', marginBottom: '0.5rem' }}>
+            <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#fff', marginTop: '1.2rem', marginBottom: '0.5rem' }}>
               About the Event
             </h3>
-            <p style={{ fontSize: '0.92rem', lineHeight: '1.7', color: 'var(--text)' }}>
+            <p style={{ fontSize: 'var(--fs-body)', lineHeight: '1.7', color: 'var(--text)' }}>
               {event.description}
             </p>
           </div>

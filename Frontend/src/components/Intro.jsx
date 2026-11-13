@@ -48,13 +48,13 @@ export default function Intro({ onDone, reduced }) {
               padding: '0 1rem',
             }}
           >
-            <p className="kicker" style={{ color: 'var(--teal)', letterSpacing: '0.35em', marginBottom: '0.4rem' }}>
+            <p className="kicker" style={{ color: 'var(--teal)', letterSpacing: '0.18em', marginBottom: '0.4rem' }}>
               COLLEGE CREATIVE COLLECTIVE
             </p>
-            <h2 className="grad" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.4rem)', fontFamily: 'Cinzel, serif' }}>
+            <h2 className="grad" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, fontFamily: 'Cinzel, serif' }}>
               {club.name}
             </h2>
-            <p style={{ fontStyle: 'italic', color: '#c9d1ee', fontSize: 'clamp(0.85rem, 2vw, 1.05rem)', margin: '0.3rem 0 0' }}>
+            <p style={{ fontStyle: 'italic', color: '#c9d1ee', fontSize: 'var(--fs-body)', margin: '0.3rem 0 0' }}>
               {club.introPunch}
             </p>
           </motion.div>
@@ -109,7 +109,7 @@ export default function Intro({ onDone, reduced }) {
           transition={{ duration: 0.8 }}
           style={{ position: 'absolute', zIndex: 20, textAlign: 'center' }}
         >
-          <span className="kicker" style={{ fontSize: '1rem', letterSpacing: '0.4em' }}>WELCOME TO</span>
+          <span className="kicker" style={{ fontSize: '0.9rem', letterSpacing: '0.2em' }}>WELCOME TO</span>
           <h1 className="welcome-flash" style={{ position: 'static', margin: '0.5rem 0' }}>
             {club.name}
           </h1>
