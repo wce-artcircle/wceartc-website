@@ -347,7 +347,7 @@ export function Leaders() {
         {leaders.map((m) => (
           <motion.div key={m.name} className="leader-card glass" {...rise}>
             <div className="leader-avatar">
-              <img src={m.image} alt={m.name} />
+              <img src={m.image} alt={m.name} style={m.imgPos ? { objectPosition: m.imgPos } : undefined} />
             </div>
             <h3 className="leader-name">{m.name}</h3>
             <p className="leader-role">{m.role}</p>
