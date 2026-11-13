@@ -63,7 +63,7 @@ export default function Intro({ onDone, reduced }) {
 
       {/* Intro Bottom Game Controls & Status */}
       {phase !== 'dive' && (
-        <div className="intro-bottom" style={{ zIndex: 10 }}>
+        <div className="intro-bottom" style={{ zIndex: 10, pointerEvents: reduced ? 'auto' : 'none', bottom: 'max(calc(12vmin + 28px), env(safe-area-inset-bottom))' }}>
           {reduced ? (
             <>
               <button className="btn btn-gold" onClick={dive}>
@@ -94,7 +94,7 @@ export default function Intro({ onDone, reduced }) {
                 <span>{Math.round(progress * 100)}%</span>
               </div>
               <small style={{ color: 'var(--text)', background: 'rgba(5, 8, 22, 0.6)', padding: '0.3rem 0.8rem', borderRadius: '999px', backdropFilter: 'blur(8px)' }}>
-                Drag globe to steer · Catch 8 stars to enter orbit
+                Move to steer · Your ship fires automatically · Shoot the bugs to collect 8 instruments
               </small>
             </>
           )}

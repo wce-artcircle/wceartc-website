@@ -123,7 +123,15 @@ export function Disciplines({ onSelectDiscipline }) {
   const x = useMotionValue(0)
   const [limit, setLimit] = useState(0)
   const [idx, setIdx] = useState(0)
+  const [hover, setHover] = useState(false)
+  const [touch, setTouch] = useState(false)
+  const [focus, setFocus] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const [bump, setBump] = useState(0)
+  const [reduced] = useState(() => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches))
+  const inView = useInView(wrapRef, { amount: 0.2 })
   const STEP = 292 // card width + gap
+  const AUTO_MS = 3500 // auto-advance interval
 
   useEffect(() => {
     const m = () => {
@@ -134,6 +142,22 @@ export function Disciplines({ onSelectDiscipline }) {
     m()
     addEventListener('resize', m)
     return () => removeEventListener('resize', m)
+  }, [])
+
+  useEffect(() => {
+    const v = () => setHidden(document.hidden)
+    document.addEventListener('visibilitychange', v)
+    return () => document.removeEventListener('visibilitychange', v)
+  }, [])
+
+  useEffect(() => {
+    const up = () => setTouch(false)
+    window.addEventListener('pointerup', up)
+    window.addEventListener('pointercancel', up)
+    return () => {
+      window.removeEventListener('pointerup', up)
+      window.removeEventListener('pointercancel', up)
+    }
   }, [])
 
   useMotionValueEvent(x, 'change', (v) =>
@@ -147,8 +171,39 @@ export function Disciplines({ onSelectDiscipline }) {
       damping: 26,
     })
 
+  useEffect(() => {
+    if (reduced || hover || touch || focus || hidden || !inView || limit <= 0) return
+    const id = setTimeout(() => {
+      const cur = -x.get()
+      if (cur >= limit - 2) {
+        animate(x, 0, { duration: 0.9, ease: [0.22, 1, 0.36, 1] })
+      } else {
+        animate(x, -Math.min(limit, (idx + 1) * STEP), { type: 'spring', stiffness: 160, damping: 26 })
+      }
+    }, AUTO_MS)
+    return () => clearTimeout(id)
+  }, [hover, touch, focus, hidden, inView, limit, idx, bump, reduced])
+
+  const bumpTimer = () => setBump((b) => b + 1)
+
+  const goUser = (d) => {
+    bumpTimer()
+    go(d)
+  }
+
   return (
-    <section id="disciplines" className="section">
+    <section
+      id="disciplines"
+      className="section"
+      onPointerEnter={(e) => {
+        if (e.pointerType === 'mouse' || e.pointerType === 'pen') setHover(true)
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === 'mouse' || e.pointerType === 'pen') setHover(false)
+      }}
+      onFocus={(e) => setFocus(!!(e.target.matches && e.target.matches(':focus-visible')))}
+      onBlur={() => setFocus(false)}
+    >
       <motion.div {...rise} className="sec-head">
         <div>
           <p className="kicker">{club.disciplinesKicker}</p>
@@ -159,10 +214,10 @@ export function Disciplines({ onSelectDiscipline }) {
           <span className="now">
             Now orbiting: <b style={{ color: disciplines[idx]?.accent }}>{disciplines[idx]?.name}</b>
           </span>
-          <button aria-label="Previous" onClick={() => go(-1)}>
+          <button aria-label="Previous" onClick={() => goUser(-1)}>
             ←
           </button>
-          <button aria-label="Next" onClick={() => go(1)}>
+          <button aria-label="Next" onClick={() => goUser(1)}>
             →
           </button>
         </div>
@@ -176,6 +231,10 @@ export function Disciplines({ onSelectDiscipline }) {
           drag="x"
           dragConstraints={{ left: -limit, right: 0 }}
           dragElastic={0.12}
+          onPointerDown={() => {
+            setTouch(true)
+            bumpTimer()
+          }}
         >
           {disciplines.map((d, i) => (
             <article
